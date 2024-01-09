@@ -1,0 +1,30 @@
+@import "st-variables";
+
+.bookmarks {
+  border-bottom: 1px solid $gray-2;
+}
+.bookmark {
+  a {
+    font-family: $font-family-base;
+    color: $gray-6;
+  }
+  i {
+    font-size: 0.688rem;
+    color: $red;
+    cursor: pointer;
+  }
+  &:hover {
+    a {
+      color: $gold;
+    }
+  }
+  &.active {
+    background: $white;
+    border-radius: $border-radius $border-radius 0 0;
+    box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.05);
+    a {
+      font-weight: 700;
+      color: $black;
+    }
+  }
+}

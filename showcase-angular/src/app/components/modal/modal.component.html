@@ -1,0 +1,46 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">Modal component</h4>
+
+  <h5>Example</h5>
+
+  <button type="button" class="btn btn-primary" (click)="openModal()">
+    Abrir Modal
+  </button>
+
+  <st-core-modal #modalRef>
+    <div class="modal-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <span class="modal-title">Titulo Modal</span>
+          </div>
+          <div class="col-6 text-right">
+            <button
+              type="button"
+              class="close-button"
+              aria-label="Close"
+              (click)="closeModal()"
+              data-automation="closeModal-button-createClient"
+            >
+              <img src="assets/icons/close-icon.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">Cuerpo de la modal</div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="closeModal()">
+        Aceptar
+      </button>
+    </div>
+  </st-core-modal>
+
+  <hr />
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <h6>Output</h6>
+</div>

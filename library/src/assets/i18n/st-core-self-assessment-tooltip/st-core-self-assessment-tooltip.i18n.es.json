@@ -1,0 +1,8 @@
+{
+  "assessment_tooltip_question": "¿Estás seguro de este nivel?",
+  "assessment_tooltip_ok_label": "Confirmar",
+  "assessment_tooltip_cancel_label": "Más detalles",
+  "assessment_tooltip_message_label": "O quiere ver",
+  "assessment_label": "Self-assessment",
+  "change_level_label": "Cambiar nivel __"
+}

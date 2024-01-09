@@ -1,0 +1,89 @@
+// Breakpoint
+$bp-lg: 1400px;
+
+// Perficient colors
+$red:       #CC1F20;
+$red-1:     #E61717;
+$red-2:     #8D0E11;
+
+$gold:      #B79967;
+$gold-1:    #C9B38D;
+$gold-2:    #8C734B;
+$gold-3:    #C9B38D;
+$gold-4:    rgba(201, 179, 141, 0.4);
+$gold-5:    #B79967;
+
+$white:     #ffffff;
+
+$gray-1:    #f8f8f8;
+$gray-2:    #E8E8E8;
+$gray-3:    #D1D3D4;
+$gray-4:    #9E9E9E;
+$gray-5:    #58595B;
+$gray-6:    #444444;
+$gray-7:    #222222;
+$gray-8:    #B0B0B0;
+$gray-9:    #B2B2B2;
+$gray-10:   #606060;
+$gray-11:   #7C7C7C;
+
+$black:     #010101;
+
+$brow:      rgba(129,167,187,0.2);
+$brow-1:    rgba(129,167,187,0.18);
+$brow-2:   rgba(36,36,36,0.15);
+
+$green:     #00BD51;
+$yellow:    #FEC256;
+$blue:      #009CEE;
+$blue-1:    #81A7BB;
+$blue-2:    rgba(0, 156, 238, 0.4);
+// heat map colors
+$green-1:   rgba(80, 134, 66, 1.0);
+$green-2:   rgba(136, 166, 129, 1.0);
+$yellow-1:  rgba(183, 154, 103, 0.8);
+$orange:    rgba(211, 130, 65, 0.8);
+$blue-3:    rgba(148, 190, 206, 0.8);
+$red-1:     rgba(191, 27, 0, 0.8);
+
+// growth plan colors
+$blue-3: #C9E6F5;
+$blue-4: #EAEFF2;
+$yellow-2: #FFF4CD;
+$red-3: #FADCD9;
+$green-3: #C7EBD1;
+$pink: #FFE7FF;
+
+$border-radius: 0.125rem;
+
+//Font-size
+$font-size-050:   0.75rem;//12px
+$font-size-100:   0.813rem;//13px;
+$font-size-200:   0.875rem;//14px;
+$font-size-300:   1rem;//16px;
+$font-size-400:   1.125rem;//18px;
+$font-size-500:   1.25rem;//20px;
+$font-size-600:   1.375rem;//22px;
+$font-size-700:   1.5rem;//24px;
+
+//Shadow
+$standard-shadow:   0 2px 4px 0 rgba(50,43,43,0.14);
+$hover-shadow:      1px 4px 10px 2px rgba(68,57,58,0.15);
+
+$font-family-base: 'lato-regular', sans-serif;
+$font-family-thin: 'lato-thin', sans-serif;
+$font-family-light: 'lato-light', sans-serif;
+$font-family-bold: 'lato-bold', sans-serif;
+$font-family-black: 'lato-black', sans-serif;
+
+// Set bootstrap defaults
+$theme-colors: (
+  'primary': $red,
+  'secondary': $red-1,
+  'success': $green,
+  'danger': $red,
+  'warning': $yellow,
+  'info': $blue,
+  'dark': $black,
+);
+

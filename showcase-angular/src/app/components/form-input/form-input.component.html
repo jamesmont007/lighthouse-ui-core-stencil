@@ -1,0 +1,47 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">Form Input component</h4>
+
+  <h5>Example</h5>
+  <form [formGroup]="testForm">
+    <st-core-form-input label-text="Required Field" show-required="true"  [errorMsg]="errorMsg" [errors]="formControlErrors('value1')"  >
+      <input type="text" class="form-control" formControlName="value1" />
+    </st-core-form-input>
+    <st-core-form-input label-text="Select Field" show-required="true"  [errorMsg]="errorMsg" [errors]="formControlErrors('value2')">
+      <select formControlName="value2" class="form-control">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+      </select>
+    </st-core-form-input>
+
+    <button type="button" class="btn btn-primary" [disabled]="testForm.invalid">Accept</button>
+  </form>
+
+  <hr />
+  <pre>{{testForm.value | json}}</pre>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [label-text] :
+      <pre>Required Field</pre>
+    </li>
+    <li>
+      [show-required] :
+      <pre>true</pre>
+    </li>
+    <li>
+      [errorMsg] :
+      <pre>{{errorMsg | json}}</pre>
+    </li>
+    <li>
+      [errors] :
+      <pre>{{formControlErrors('value1') | json}}</pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+</div>

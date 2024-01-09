@@ -1,0 +1,68 @@
+:host {
+  .card {
+    border: none;
+    background-color: transparent;
+    margin-left: 0.6rem;
+    display: flex;
+    align-items: top;
+    .invisible-block {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.2rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:not(:focus) + span:not(:hover) {
+        display: none;
+      }
+    }
+    
+    .md {
+      width: 9rem;
+    }
+
+    .disabled-div {
+      pointer-events: none;
+    }
+
+    .tooltip-position {
+      position: absolute;
+      z-index: 1;
+      border-radius: 0.2rem;
+      text-align: center;
+
+      &__right {
+        margin-top: -0.6rem;
+        margin-right: 0.6rem;
+        margin-left: 30px;
+
+        &::after {
+          top: 0.6rem;
+          left: -1.2rem;
+          border: 0.6rem solid transparent;
+          border-right-color: var(--dynamic-color);
+        }
+      }
+
+      &__bottom {
+        margin-top: 3rem;
+        margin-left: -3rem;
+
+        &::after {
+          top: -1.2rem;
+          left: 4rem;
+          border: 0.6rem solid transparent;
+          border-bottom-color: var(--dynamic-color);
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+}

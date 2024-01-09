@@ -1,0 +1,54 @@
+:host {
+  display: block;
+
+  table{  
+    tbody tr{
+      border-bottom: 1px solid $gray-2;
+      &:first-child{
+        border-bottom: none;
+      }
+      td{
+        .form-group{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .card {
+    height: auto;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    border: none;
+  }
+  .form-label {
+    font-family: $font-family-base;
+  }
+  .title-skill-table {
+    font-family: $font-family-base;
+    color: $black;
+    font-size: $font-size-400;
+    letter-spacing: -0.5px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+  .form-control {
+    &:disabled,
+    &[readonly] {
+      color: $gray-3;
+      background-color: $gray-1;
+      border-color: $gray-1;
+    }
+  }
+
+  .skill-description {
+    margin-top: 1rem;
+    font-weight: lighter;
+  }
+
+  .detail {
+    td {
+      padding: 1rem 2rem;
+    }
+    border-top: 1px solid $gray-3;
+    border-bottom: 1px solid $gray-3;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title_plan": "Validate your info plan",
+  "title_goal": "Validate your info goals",
+  "finish_all_goals": "For finish plan all goals and actions must be done or suspended",
+  "finish_all_suggested": "For finish plan all suggested goals and actions must be accepted or rejected",
+  "plan_least_one_goal": "The plan should have at least one goal",
+  "plan_projection_field_old": "Now the projection field is required, please, fill this field",
+  "plan_projection_field_new": "Projection field is required",
+  "plan_goal_field": "Goal field is required",
+  "plan_goal_date": "Your goal ___ requires an estimated date of completion.",
+  "goal_action_required": "actions field is required",
+  "goal_date":"Your action ___ requires an estimated date of completion.",
+  "goal_expired_date": "The estimated completion date of your goal ___ has already expired",
+  "goal_commitment_expired_date": "The estimated completion date of your commitment ____ within your goal ___ has expired.",
+  "goal_higher_date": "The estimated date of your action cannot be greater than the estimated date of your goal",
+  "commitment_text": "Review and modify the status or date of the actions defined for today",
+  "status_description": "Description is required for validate",
+  "status_empty_field": "You must have all the information of the actions filled out before changing to this finalized",
+  "status_text": "You cannot change the state of the skill until all its actions are finished or suspended"
+}

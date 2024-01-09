@@ -1,0 +1,12 @@
+.header {
+  height: 70px;
+  &-logout {
+    width: 70px;
+    height: 70px;
+    background: $black;
+    cursor: pointer;
+    i {
+      font-size: 2em;
+    }
+  }
+}

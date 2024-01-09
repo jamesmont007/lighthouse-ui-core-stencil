@@ -1,0 +1,39 @@
+@mixin tags-form-control($margin, $bg-color) {
+  border: none !important;
+  background-color: $bg-color !important;
+  display: inline-block !important;
+  padding: 0 0 0 1rem !important;
+  margin: $margin;
+}
+
+@mixin tags-inputs($color, $margin, $form-color){
+  align-items: center;
+  background-color: $color;
+  display: flex;
+  flex-direction: column;
+  cursor: text;
+  &__container{
+    display: inline-block;
+    width: 100%;
+    .form-control{
+      @include tags-form-control($margin, $form-color)
+    }
+  }
+}
+
+:host {
+  .tags-inputs {
+    @include tags-inputs($white, 8px, $white);
+    &-separator {
+      box-sizing: border-box;
+      border: 1px solid $gray-3;
+      background-color: $gray-3;
+      max-height: 1px;
+      width: 100%;
+    }
+  }
+  .tags-inputs-form{
+    @include tags-inputs($gray-1, 0, transparent);   
+    border-bottom: 1px solid $gray-3;
+  }
+}

@@ -1,0 +1,64 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">
+    Core selector component
+  </h4>
+
+  <h5>Example</h5>
+
+  <st-core-selector
+    [name]="name"
+    [options]="options"
+    [placeholder]="placeholder"
+    [value]="value"
+    (selectElement)="selectElementHandler($event.detail)">
+  </st-core-selector>
+
+  <div class="mt-3 alert alert-success"
+    role="alert">
+    <h4 class="alert-heading">
+      Result actions
+    </h4>
+    <p></p>
+    <hr>
+    <p class="mb-0">
+      <b>selectElement:</b> {{ selectElementHandlerResult }}
+    </p>
+  </div>
+
+  <hr>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [name] :
+      <pre>{{ name }}</pre>
+    </li>
+
+    <li>
+      [options] :
+      <pre> {{ options | json }} </pre>
+    </li>
+
+    <li>
+      [placeholder] :
+      <pre> {{ placeholder | json }} </pre>
+    </li>
+
+    <li>
+      [value] :
+      <pre> {{ value | json }} </pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+
+  <ul>
+    <li>
+      (selectElement) : selectElementHandler
+    </li>
+  </ul>
+
+</div>

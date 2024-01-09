@@ -1,0 +1,110 @@
+:host {
+  .plan {
+    padding: $font-size-200 $font-size-300;
+    &-header {
+      &__title {
+        font-size: 2rem;
+        color: $red;
+        margin: 0;
+      }
+      &__top {
+        display: flex;
+        justify-content: space-between;
+      }
+      &-body{
+        display: flex;
+        justify-content: space-between;
+        &-projection {
+          width: 50%;
+          &-info{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: $font-size-050;
+            &__title{
+              font-weight: bold;
+              font-size: $font-size-200;
+            }
+            &__edit{
+              display: flex;
+              align-items: center;
+              color: $red;
+              font-size: $font-size-200;
+              cursor: pointer;
+            }
+          }
+          &__area{
+            min-height: 6rem;
+            &-error {
+              border-bottom: 1px solid $red !important;
+              &-msg {
+                color: $red;
+                font-size: $font-size-050;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        &--pd{
+          padding: 1rem;
+        }
+        &-mentors {
+          width: 45%;
+          &-info {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: $font-size-050;
+            &__title {
+              font-weight: bold;
+              font-size: $font-size-200;
+            }
+            &__edit {
+              display: flex;
+              align-items: center;
+              color: $red;
+              font-size: $font-size-200;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    &-table {
+      margin-top: 2rem;
+      &-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        &-filter{
+          display: flex;
+          gap: 2rem;
+          align-items: flex-end;
+          &__input{
+            width: 25rem;
+          }
+        }
+        &__icons {
+          display: flex;
+          gap: 1rem;
+          position: relative;
+          bottom: 0.8rem;
+          img {
+            width: 1.125rem;
+          }
+          &-board{
+            cursor: pointer;
+          }
+          &-list{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-btn-finish{
+      margin-top: 2rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

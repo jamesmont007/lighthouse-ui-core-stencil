@@ -1,0 +1,39 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">Skill Evaluation</h4>
+
+  <h5>Example</h5>
+  <st-core-skill-evaluation
+    identification="surveyButton"
+    [skillData]="data"
+    [completeData]="completeData"
+    [newSkill]="newSkill"
+    (submitEvent)="handleSubmit($event.detail)"
+    (addNewSkill)="handleNewSkill($event.detail)"
+
+  ></st-core-skill-evaluation>
+
+  <hr />
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [data] :
+      <pre>{{ data | json }}</pre>
+    </li>
+    <li>
+      [completeData] :
+      <pre>{{ completeData | json }}</pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+
+  <ul>
+    <li>
+      <!-- (navigateLink) : handleNavigateLink -->
+    </li>
+  </ul>
+</div>

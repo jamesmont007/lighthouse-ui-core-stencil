@@ -1,0 +1,83 @@
+:host {
+  display: block;
+
+  .draggable {
+    cursor: move;
+  }
+
+  .plan-table {
+    &-body {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      &--headers {
+        table {
+          background-color: inherit;
+
+          tr{
+            text-align: left;
+          }
+          th {
+            color: $red;
+            padding: 6px 0;
+          }
+          .table--w-75{
+            width: 75%;
+          }
+          .table--w-25{
+            width: 25%;
+          }
+          .table--w-15 {
+            width: 15%;
+          }
+          .table--w-10 {
+            width: 10%;
+          }
+          .table--w-5 {
+            width: 5%;
+          }
+        }
+      }
+    }
+  }
+
+  .goal-container {
+    align-self: flex-start;
+    padding: 0.7rem 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    color: $black;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: normal;
+    // margin-top: 1.125rem;//este
+    margin-bottom: 1rem;
+
+    &--color{
+      &-0{
+        background: $blue-3;
+      }
+      &-1{
+        background: $yellow-2;
+      }
+      &-2{
+        background: $green-3;
+      }
+      &-3{
+        background: $red-3;
+      }
+      &-4{
+        background: $pink;
+      }
+      &-5{
+        background: $pink;
+      }
+    }
+  }
+}
+
+.table-head {
+  // margin-bottom: 1rem;
+}

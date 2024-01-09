@@ -1,0 +1,82 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">
+    Core paginator component
+  </h4>
+
+  <h5>Example</h5>
+
+  <st-core-paginator
+    [havePageSizeChunk]="havePageSizeChunk"
+    [page]="page"
+    [pageSize]="pageSize"
+    [totalItems]="totalItems"
+    (changePage)="changePageHandler($event.detail)"
+    (changePageSize)="changePageSizeHandler($event.detail)">
+  </st-core-paginator>
+
+  <div class="alert alert-success"
+    role="alert">
+    <h4 class="alert-heading">
+      Result actions
+    </h4>
+    <p></p>
+    <hr>
+    <p class="mb-0">
+      <b>changePageHandler:</b> {{ changePageHandlerResult }}
+    </p>
+    <p class="mb-0">
+      <b>changePageSizeHandler:</b> {{ changePageSizeHandlerResult }}
+    </p>
+  </div>
+
+  <hr>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [havePageSizeChunk] :
+      <div class="custom-switch">
+        <input
+          [(ngModel)]="havePageSizeChunk"
+          type="checkbox"
+          class="custom-control-input"
+          id="havePageSizeChunkSwitch" />
+        <label class="custom-control-label"
+          for="havePageSizeChunkSwitch">
+          {{ havePageSizeChunk }}
+        </label>
+      </div>
+    </li>
+
+    <li>
+      [page] :
+      <pre> {{ page }} </pre>
+    </li>
+
+    <li>
+      [pageSize] :
+      <pre> {{ pageSize }} </pre>
+    </li>
+
+    <li>
+      [totalItems] :
+      <pre> {{ totalItems }} </pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+
+  <ul>
+    <li>
+      (changePage) : changePageHandler
+    </li>
+
+    <li>
+      (changePageSize) : changePageSizeHandler
+    </li>
+  </ul>
+
+</div>

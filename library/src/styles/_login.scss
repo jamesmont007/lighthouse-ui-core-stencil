@@ -1,0 +1,32 @@
+video {
+    position: fixed;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  .home-video {
+    .content-login {
+      background: rgba(255, 255, 255, 0.89);
+      margin: auto;
+      padding: 60px;
+      border-radius: 7px;
+      max-width: 450px;
+      box-sizing: content-box;
+    }
+  
+    img {
+      width: 100%;
+    }
+  
+    .btn-login {
+      background-color: $red;
+      color: $white;
+      padding: 10px 14px;
+      margin-top: 50px;
+      display: block;
+    }
+  }
+  

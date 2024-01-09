@@ -1,0 +1,60 @@
+:host {
+  display: block;
+
+  .draggable {
+    cursor: move;
+  }
+
+  .plan-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    height: calc(100vh - 5rem);
+    background: rgba($color: $white, $alpha: 0.5);
+    margin-top: 1.5rem;
+    overflow-y: scroll;
+    &-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &__label {
+        padding: 0.7rem 3rem;
+        text-align: center;
+        color: $black;
+        font-weight: 600;
+        font-size: 1rem;
+        font-style: normal;
+        &--color{
+          &-0{
+            background: $blue-3;
+          }
+          &-1{
+            background: $yellow-2;
+          }
+          &-2{
+            background: $green-3;
+          }
+          &-3{
+            background: $red-3;
+          }
+          &-4{
+            background: $pink;
+          }
+          &-5{
+            background: $pink;
+          }
+        }
+      }
+      &__rail {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+        height: 100%;
+        background-color: #F7F7F7;
+      }
+    }
+  }
+}

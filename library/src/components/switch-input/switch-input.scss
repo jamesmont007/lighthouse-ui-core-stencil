@@ -1,0 +1,113 @@
+$transition-duration: 0.3s;
+
+:host {
+  .switch {
+    position: relative;
+    margin: 0;
+    height: 1.8rem;
+
+    &.normal {
+      width: 8.2rem;
+    }
+
+    &.small {
+      width: 6.2rem;
+    }
+
+    &.x-small{
+      width: 4.2rem;
+    }
+
+    input {
+      display: none;
+    }
+    .switch-bg { // background
+      width: 100%;
+      height: 1.8rem;
+      display: block;
+      padding: 0.2rem;
+      background: $gray-3;
+      border-radius: 40px;
+      transition: background-color $transition-duration;
+      cursor: pointer;
+
+      &::before { // circle
+        content: '';
+        display: block;
+        width: 1.4rem;
+        height: 1.4rem;
+        background: $white;
+        border-radius: 50%;
+        transition: transform $transition-duration;
+      }
+    }
+
+    &.x-small .switch-bg{
+      &::before { // circle
+        width: 1.3rem;
+        height: 1.3rem;
+      }      
+    }
+
+    input:checked + .switch-bg {
+      background: $red;
+    }
+
+    &.normal input:checked + .switch-bg {
+      &::before {
+        transform: translateX(6.3rem);
+      }
+    }
+
+    &.small input:checked + .switch-bg {
+      &::before {
+        transform: translateX(4.3rem);
+      }
+    }
+    &.x-small input:checked + .switch-bg {
+      &::before {
+        transform: translateX(2.4rem);
+      }
+    }
+
+    input:disabled + .switch-bg {
+      opacity: 0.5;
+      cursor: initial;
+    }
+
+    .switch-text {
+      position: absolute;
+      margin: 0;
+      right: 0;
+      bottom: 0;
+      color: $white;
+      cursor: pointer;
+      text-shadow: 2px 0 5px $gray-4;
+    }
+
+    &.normal .switch-text {
+      top: 0.1rem;
+      left: 0.2rem;
+    }
+
+    &.small .switch-text {
+      top: 0.2rem;
+      left: 0.4rem;
+      transition: transform $transition-duration;
+    }
+
+    &.small input:checked ~ .switch-text {
+      transform: translateX(-0.5rem);
+    }
+
+    &.x-small .switch-text {
+      top: 0.3rem;
+      left: 0.7rem;
+      transition: transform $transition-duration;
+    }
+
+    &.x-small input:checked ~ .switch-text {
+      transform: translateX(-0.8rem);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:host {
+  .required {
+    color: $red;
+    margin-left: 5px;
+    &::after {
+      display: inline-block;
+      content: '*';
+  }
+  }
+  .form-group {
+    &__has-error {
+      ::slotted(.form-control) {
+        border-bottom: 1px solid $red !important;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+    &__label {
+      font-size: $font-size-200;
+      font-family: $font-family-bold;
+      font-weight: normal;
+      color: $black;
+      margin-bottom: 0.938rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--bold {
+        font-weight: 600;
+      }
+      button{
+        background-color: white;
+        border: none;
+      }
+    }
+    &__text-error {
+      color: $red;
+      font-size: $font-size-050;
+      font-weight: 600;
+    }
+  }
+  .bold-font {
+    label{
+      font-weight: bold;
+    }
+  }
+  
+  .red-icon{
+    filter: invert(14%) sepia(96%) saturate(4177%) hue-rotate(351deg) brightness(85%) contrast(87%);
+  }
+  
+  .sort-icon-size {
+    width: 15px;
+    height: 15px;
+  }
+}

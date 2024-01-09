@@ -1,0 +1,42 @@
+.user-skills__tooltip-self-assessment {
+  left: 25%;
+  top: 25%;
+
+  &__question {
+    font-size: $font-size-400;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $red;
+    cursor: pointer;
+
+    &:hover {
+      color: $red-1;
+    }
+  }
+
+  &__label{
+    color: $red;
+    width: 7.25rem;
+  }
+
+  &::part(tooltip-card) {
+    padding: 0.6rem 0.9rem;
+    font-size: $font-size-300;
+    font-weight: normal;
+    width: 15rem;
+    box-shadow: 0 0 5px $gray-4;
+    left: -5rem;
+    z-index: 10;
+
+    &::after {
+      top: -1.2rem;
+      left: 8rem;
+    }
+  }
+
+  .icon.icon-check {
+    color: white!important;
+  }
+}

@@ -1,0 +1,159 @@
+@import "st-variables";
+
+@mixin buttons($background, $color, $borderC, $opacity) {
+  background: $background;
+  color: $color;
+  border-color: $borderC;
+  opacity: $opacity;
+  &:focus,
+  &:hover,
+  &:active,
+  &:active:focus,
+  &:disabled {
+    background: $background !important;
+    color: $color !important;
+    border-color: $borderC !important;
+    box-shadow: none !important;
+  }
+  &.disable,
+  &:disabled {
+    opacity: $opacity;
+    cursor: not-allowed;
+  }
+}
+
+// Update bootstrap default btn
+.btn {
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  font-size: $font-size-200;
+  font-weight: 400;
+  font-family: $font-family-bold;
+  padding: 0 30px;
+  height: 40px;
+  min-width: 170px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  i{
+    margin-left: initial;
+  }
+}
+
+
+//sort tables (arrow filter)
+.btn-sort {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  padding: 0;
+  color: $black;
+  font-weight: bold;
+  font-size: $font-size-200;
+  i {
+    margin-left: 0.5em;
+    color: $red;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-filter {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  padding: 3px 0 3px 0;
+  color: $black;
+  font-weight: normal;
+  font-size: $font-size-100;
+  background-color: #D9D9D9;
+}
+
+.btn-filter.clicked {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  color: $black;
+  font-weight: bold;
+  font-size: $font-size-100;
+  background-color: #FCDDDF;
+}
+
+.btn-small{
+  height: 30px;
+}
+
+
+[role="button"] {
+  cursor: pointer;
+}
+
+.btn-primary {
+  @include buttons($red, $white, $red, 1);
+  &:hover,
+  &:active {
+    @include buttons($red-1, $white, $red-1, 1);
+  }
+  &.disable,
+  &:disabled {
+    @include buttons($red, $white, $red, 0.4);
+  }
+}
+
+.btn-secondary {
+  @include buttons(white, $red, $red, 1);
+  &:hover,
+  &:active {
+    @include buttons(rgba($red, 0.12), $red, $red, 1);
+  }
+  &.disable,
+  &:disabled {
+    @include buttons($gray-1, $red, $red, 0.4);
+  }
+}
+
+.btn-icon {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.688rem;
+  min-width: auto;
+  span, i {
+    margin-right: 0.938rem;
+  }
+}
+
+.btn-link {
+  color: $gold !important;
+}
+
+
+.close-button, .close{
+  background-color: unset;
+  border: unset;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:focus {
+    outline: unset;
+  }
+  i{
+    color: $white !important;
+    font-size: 1.2rem !important;
+    font-weight: normal !important;
+  }
+}

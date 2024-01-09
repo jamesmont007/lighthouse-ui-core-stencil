@@ -1,0 +1,11 @@
+:host {
+  .list-group {
+    width: auto;
+    z-index: 1000;
+    &__item {
+      &:hover {
+        background-color: $gray-3;
+      }
+    }
+  }
+}

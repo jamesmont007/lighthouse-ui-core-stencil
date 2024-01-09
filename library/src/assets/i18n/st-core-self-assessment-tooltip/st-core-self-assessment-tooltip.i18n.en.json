@@ -1,0 +1,8 @@
+{
+  "assessment_tooltip_question": "Are you sure of this level?",
+  "assessment_tooltip_ok_label": "Confirm",
+  "assessment_tooltip_cancel_label": "More details",
+  "assessment_tooltip_message_label": "Or do you want to check",
+  "assessment_label": "Self-assessment",
+  "change_level_label": "Change __ level"
+}

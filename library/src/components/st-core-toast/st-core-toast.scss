@@ -1,0 +1,82 @@
+:host {
+  display: block;
+
+  .toast-bar {
+    position: absolute;
+    height: 0.3rem;
+    border-radius: 8px 8px 0 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+  .bg-back {
+    &-success {
+      background-color: #177a4c;
+    }
+    &-warning {
+      background-color: #d4a105;
+    }
+    &-danger {
+      background-color: #b12b38;
+    }
+  }
+
+  .notification {
+    height: 60px;
+    min-width: 600px;
+    font-family: $font-family-base;
+    position: relative;
+    opacity: 100%;
+    &-body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      &_title {
+        font-family: inherit;
+        font-size: $font-size-100;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      &_text {
+        font-family: inherit;
+        font-size: $font-size-300;
+        font-weight: 100;
+        margin-bottom: 3px;
+      }
+    }
+    .close {
+      color: $gold;
+      font-size: 36px;
+      font-family: initial;
+    }
+  }
+
+  @keyframes disappear {
+    0% {
+      opacity: 100%;
+    }
+    80% {
+      opacity: 100%;
+    }
+    90% {
+      opacity: 10%;
+    }
+    95% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+
+  @keyframes moveToLeft {
+    0% {
+      transform: translateX(-2%);
+    }
+    100% {
+      transform: translateX(-105%);
+    }
+  }
+}

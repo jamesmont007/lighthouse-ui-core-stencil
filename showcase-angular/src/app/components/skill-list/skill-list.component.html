@@ -1,0 +1,84 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">
+    Select skill component
+  </h4>
+
+  <h5>Example</h5>
+
+  <st-core-skill-list class="skill-list"
+    [data]="userSkills"
+    [levelsEnum]="getLevelToShow()"
+    [isAdmin]="isAdmin"
+    [currentSkill]="currentSkill"
+    (selectedSkill)="selectedSkillHandler($event.detail)"
+    (createSkill)="createSkillHandler()">
+  </st-core-skill-list>
+
+  <div class="alert alert-success"
+    role="alert">
+    <h4 class="alert-heading">
+      Result actions
+    </h4>
+    <p></p>
+    <hr>
+    <p class="mb-0">
+      <b>selectedSkill:</b>
+    </p>
+    Skill: <pre> {{ selectedSkillHandlerResult | json }} </pre>
+    Index: {{ selectedSkillHandlerIndexResult }}
+    <p class="mb-0">
+      <b>createSkill:</b> {{ createSkillHandlerResult }}
+    </p>
+  </div>
+
+  <hr>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [data] :
+      <pre>{{ userSkills | json }}</pre>
+    </li>
+
+    <li>
+      [levelsEnum] :
+      <pre> {{ getLevelToShow() | json }} </pre>
+    </li>
+
+    <li>
+      [isAdmin] :
+      <div class="custom-control custom-switch">
+        <input
+          [(ngModel)]="isAdmin"
+          type="checkbox"
+          class="custom-control-input"
+          id="isAdminSwitch" />
+        <label class="custom-control-label"
+          for="isAdminSwitch">
+          {{ isAdmin }}
+        </label>
+      </div>
+    </li>
+
+    <li>
+      [currentSkill] :
+      <pre> {{ currentSkill }} </pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+
+  <ul>
+    <li>
+      (selectedSkill) : selectedSkillHandler
+    </li>
+
+    <li>
+      (createSkill) : createSkillHandler
+    </li>
+  </ul>
+
+</div>

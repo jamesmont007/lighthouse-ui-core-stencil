@@ -1,0 +1,12 @@
+{
+  "mentors": "mentors",
+  "learners": "learners",
+  "title_list": "Mentors list",
+  "action_to_do": "Add mentor",
+  "message_learner_tooltip": "People who help and guide ___ with his growth plan",
+  "message_mentor_tooltip": "People that ___ helps and guides with their growth plan",
+  "col_name": "Name",
+  "col_add_date": "Date added",
+  "col_delete": "Delete",
+  "message_empty_list": "User currently has no ___"
+}

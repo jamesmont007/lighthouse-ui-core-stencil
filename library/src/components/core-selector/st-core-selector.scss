@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Select background arrow
+select.form-control,
+.custom-select {
+  appearance: none;
+  background: $gray-1
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='%23CC1F20'/%3E%3C/svg%3E")
+    no-repeat right 5px center / 18px;
+  &:disabled {
+    background: $gray-1
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' /%3E%3C/svg%3E")
+      no-repeat right 5px center / 18px;
+  }
+  &.is-invalid {
+    background: $gray-1
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='red' /%3E%3C/svg%3E")
+      no-repeat right 5px center / 18px;
+  }
+}
+
+// Remove focus
+.form-control:focus,
+.custom-select:focus {
+  box-shadow: none !important;
+  background-color: $gray-1;
+  border-color: $gold;
+}
+
+
+.form-control,
+.custom-select {
+  min-height: 40px;
+  color: $gray-6;
+  background-color: $gray-1;
+  transition: none;
+  &:placeholder {
+    font-weight: lighter;
+    color: $gray-5;
+  }
+  &:disabled,
+  &[readonly] {
+    color: $gray-3;
+    background-color: $gray-1;
+    border-color: $gray-1;
+  }
+}

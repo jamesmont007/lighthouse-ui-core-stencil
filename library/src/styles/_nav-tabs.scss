@@ -1,0 +1,25 @@
+// @import '../variables.scss';
+.nav-tabs {
+  margin-bottom: 1rem;
+  .nav-link {
+    padding: 20px;
+    font-size: $font-size-200;
+    font-family: $font-family-base;
+    color: $gray-3;
+    border: none !important;
+    &.active {
+      color: $black !important;
+      font-weight: 700;
+      background-color: transparent !important;
+      border: none;
+      border-bottom: 2px solid $gold !important;
+    }
+    &:hover:not(.active) {
+      color: $gold;
+      border: none;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+}

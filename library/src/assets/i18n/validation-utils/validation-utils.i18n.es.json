@@ -1,0 +1,20 @@
+{
+  "title_plan": "Valida la información de tu plan",
+  "title_goal": "Valida la información de tus objetivos",
+  "finish_all_goals": "Para finalizar un plan, todos los objetivos y acciones deben estar finalizados o suspendidos",
+  "finish_all_suggested": "Para finalizar un plan, todas los objetivos y acciones deben ser aceptados o rechazados",
+  "plan_least_one_goal": "El plan debe tener al menos un (1) objetivo",
+  "plan_projection_field_old": "El campo de \"Proyección\" es requerido, por favor completa la información",
+  "plan_projection_field_new": "El campo de \"Proyección\" es requerido",
+  "plan_goal_field": " El campo \"Objetivo\" es requerido",
+  "plan_goal_date": "Tu objetivo ___ requiere una fecha estimada de terminación",
+  "goal_action_required": "El campo \"Acción\" es requerido",
+  "goal_date":"Tu acción ___ requiere una fecha estimada de terminación",
+  "goal_expired_date": " La fecha estimada de terminación de tu objetivo ___ ha expirado",
+  "goal_commitment_expired_date": "La fecha estimada de terminación de la acción ____ de tu objetivo ___ ya ha expirado",
+  "goal_higher_date": "La fecha de tus acciones no pueden ser mayores que las de tu objetivo",
+  "commitment_text": "Revisa y modifica el estado o fecha de las acciones definidas para el día de hoy",
+  "status_description": "La descripción es requerida para validar",
+  "status_empty_field": "Toda la información de las acciones debe ser llenada antes de finalizar",
+  "status_text": "No es posible cambiar el estado del objetivo hasta que las acciones se encuentren finalizadas o suspendidas"
+}

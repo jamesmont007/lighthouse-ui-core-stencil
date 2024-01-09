@@ -1,0 +1,55 @@
+{
+  "name": "lighthouse-ui-core-stencil",
+  "version": "2.17.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "prepare": "cd library && yarn run build && mv -f ./dist ../ && mv -f ./loader ../ && cd ../ && husky install",
+    "dependencies-stencil": "cd library && yarn install",
+    "lint-stencil": "cd library && yarn run lint",
+    "test-stencil": "cd library && yarn run test",
+    "build-stencil": "cd library && yarn run build",
+    "dependencies-angular": "cd showcase-angular && yarn install",
+    "lint-angular": "cd showcase-angular && yarn run lint",
+    "build-angular": "cd showcase-angular && yarn run build",
+    "dependencies-react": "cd showcase-react && yarn install",
+    "lint-react": "cd showcase-react && yarn run lint",
+    "build-react": "cd showcase-react && yarn run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pslcorp/lighthouse-ui-core-stencil.git"
+  },
+  "keywords": [
+    "angular",
+    "react",
+    "stencil"
+  ],
+  "author": "pslcorp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pslcorp/lighthouse-ui-core-stencil/issues"
+  },
+  "homepage": "https://github.com/pslcorp/lighthouse-ui-core-stencil#readme",
+  "dependencies": {
+    "@stencil/core": "~1.12.2",
+    "@stencil/sass": "~1.3.2",
+    "@types/sortablejs": "^1.15.3",
+    "apexcharts": "^3.35.3",
+    "bootstrap": "^4.5.0",
+    "lodash": "^4.17.15",
+    "material-icons": "^0.3.1",
+    "sortablejs": "^1.15.0",
+    "stencil-apexcharts": "^2.3.0"
+  },
+  "resolutions": {
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  }
+}

@@ -1,0 +1,114 @@
+@import 'st-variables';
+// personalize modals
+.modal-content {
+  border-radius: $border-radius;
+  color: $gray-6;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+}
+
+.right-fold-modal {
+  width: 100%;
+  .modal-header {
+    background-color: $black;
+    height: 70px;
+    padding: 21px 40px 21px 40px;
+
+    .modal-title {
+      color: $white;
+      font-size: $font-size-400;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 27px;
+    }
+  }
+
+  .modal-body {
+    color: $gray-6;
+    font-size: $font-size-200;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 19px;
+    padding: 30px 40px 30px 40px;
+  }
+
+  .modal-footer {
+    box-sizing: border-box;
+    height: 106px;
+    background-color: $gray-1;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .message-modal {
+    border-radius: $border-radius;
+    color: $white;
+    position: absolute;
+    top: 30vh;
+    left: 150px;
+    padding: 10px 30px 10px 30px;
+
+    &-success {
+      border: 1px solid $green;
+      background-color: $green;
+    }
+    &-error {
+      border: 1px solid $red;
+      background-color: $red;
+    }
+  }
+
+  .modal-dialog {
+    margin: 0 0 0 auto;
+    max-width: 613px;
+    height: 100%;
+
+    .modal-content {
+      height: 100%;
+      border-radius: 8px 0 0 0;
+    }
+  }
+}
+
+//TAM Modal
+.modal {
+  display: block;
+  animation: fade 0.25s ease forwards;
+  background: rgba(0, 0, 0, 0.2);
+  .modal-dialog {
+    animation: slideDown 0.25s ease forwards;
+    opacity: 1;
+  }
+  .modal-header {
+    background: $white;
+    color: $black;
+    border-bottom: none;
+    .modal-title{
+      font-size: $font-size-300;
+      font-family: $font-family-bold;
+    }
+  }
+  .modal-footer{
+    border: none;
+  }
+  .close {
+    color: $red;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

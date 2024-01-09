@@ -1,0 +1,78 @@
+:host {
+  display: block;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  .card {
+    height: 120px;
+    background: $gray-1;
+    box-shadow: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover:not([disabled]) {
+      color: $gold;
+      border-color: $gold;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      border: 1px solid transparent;
+    }
+  }
+
+  .assess-table {
+    table{
+      width: 100%;    
+      .filter-form {
+        label{
+          font-size: 600;
+        } 
+      }  
+      .header-title {
+        font-size: 0.875rem;
+        font-family: "lato-bold", sans-serif;
+        font-weight: normal;
+        color: #010101;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+          min-height: 2.5rem;
+          padding: 0.5rem 1.25rem;
+          display: flex;
+          gap: 0.5em;
+        }
+        .fit-input{
+          height: 107px;
+        }
+      }
+      thead {
+        tr {
+          th {
+            padding-right: 1em;
+          }
+        }
+      }
+      tbody{
+        tr {
+          background-color: #F8F8F8;
+          border: 1px solid  #E8E8E8;
+          height: 3em;
+          td {
+            width: 37.5%;
+          }
+          td:first-child {
+            padding-left: 1em;
+          }
+          td:last-child {
+            width: 25%;
+          }
+        }
+      }
+      .center-column {
+        padding-left: 3em;
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+@mixin focusElement($clase) {
+  transition: all 0.5s ease-in-out;
+  &.#{$clase}{
+    box-shadow: 0 0 10px 1px $gold-5;
+    background-color: $white;
+    transform: scale(1.1, 1.1);
+  }
+}
+
+:host {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+
+  .skill-evaluation {
+    display: flex;
+    flex-direction: column;
+
+    &__filters {
+      display: flex;
+      align-items: flex-end;
+      background-color: $gray-1;
+      position: sticky;
+      top: -0.1%;
+      z-index: 1;
+
+      .select {
+        &--skills {
+          width: 35rem;
+          margin-bottom: 1.875rem;
+        }
+        &--disciplines {
+          width: 10rem;
+          margin-bottom: 1.875rem;
+          margin-right: 1rem;
+        }
+        &--button {
+          margin-bottom: 1.875rem;
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+      }
+
+      st-core-form-input {
+        width: 12rem;
+        margin: 0 1rem 0 1rem;
+      }
+
+      .btn-secondary {
+        margin-bottom: 1.875rem;
+        margin-right: 1rem;
+        &::before {
+          content: '+';
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &--title {
+      font-size: $font-size-700;
+      margin-bottom: 1rem;
+    }
+
+    &--body {
+      padding: 1rem 1rem;
+      background: $white;
+      box-shadow: $standard-shadow;
+
+      .evaluation-group {
+        border: 1px solid $gray-2;
+        padding: 0.5rem 1rem 1rem 1rem;
+        margin-bottom: 1rem;
+
+        @include focusElement("category--focused");
+
+        &--description {
+          display: flex;
+          align-items: center;
+          position: relative;
+        }
+        &--title {
+          font-size: $font-size-500;
+          color: $red;
+          margin-bottom: 0.3rem;
+        }
+
+        .table {
+          width: 100%;
+
+          .required {
+            &::after {
+              color: $red;
+              margin-left: 5px;
+              display: inline-block;
+              content: '*';
+            }
+          }
+
+          .tr--skill {
+            @include focusElement("skill--focused");
+          }
+
+          .td--skill-name {
+            width: 16rem;
+          }
+
+          .header--skills {
+            #observations {
+              width: 60%;
+            }
+          }
+
+          st-core-single-skill {
+            width: 100%;
+          }
+
+          .container--information {
+            &-description {
+              &--title {
+                color: $red;
+                font-size: 0.9rem;
+              }
+              &--body {
+                font-size: $font-size-200;
+                margin-left: 1rem;
+              }
+            }
+
+            &-details {
+              &--title {
+                color: $red;
+                font-size: 0.9rem;
+              }
+              &--body {
+                font-size: $font-size-200;
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .form-button {
+      width: 5rem;
+      margin-top: 1rem;
+      align-self: flex-end;
+    }
+  }
+
+  textarea {
+    overflow: hidden;
+  }
+
+  .floating-button{
+      position: fixed;
+      margin-top: 60vh;
+      margin-left: 70vw;
+      z-index: 1;
+  }
+
+  .size-btn{
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn-save{
+    position:fixed;
+    width: 85px;
+    height: 85px;
+    bottom: 30px;
+    right:30px;
+    line-height: 85px;
+    background: #CC1F20;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,3);
+    z-index: 100;
+    cursor: pointer;
+  }
+}

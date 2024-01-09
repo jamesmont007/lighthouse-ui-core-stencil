@@ -1,0 +1,66 @@
+:host {
+  .tooltip-skill {
+    margin-left: 10px;
+    display: flex;
+    align-items: top;
+    img {
+      display: inline-block;
+      height: 20px;
+    }
+
+    span {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      max-width: 50%;
+      margin-top: -10px;
+      margin-right: 10px;
+      margin-left: 30px;
+      padding: 10px 15px;
+      font-size: $font-size-050;
+      font-weight: normal;
+      line-height: 2;
+      color: $white;
+      background: $gray-6;
+      white-space: normal;
+      border-radius: 2px;
+    }
+    &:hover span {
+      display: block;
+      text-align: center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: -18px;
+        display: block;
+        border: 10px solid transparent;
+        border-right-color: $gray-6;
+      }
+    }
+    &-description {
+      max-width: 25% !important;
+      text-align: left !important;
+      z-index: 0 !important;
+      top: 0;
+    }
+  }
+
+  .tooltip__bottom {
+    &:hover span {
+      min-width: 15rem;
+      margin-left: -170px;
+      margin-top: 40px;
+      &::before {
+        top: -18px;
+        left: 172px;
+        border: 10px solid transparent;
+        border-bottom-color: #444444;        
+      }
+    }
+  }
+
+  .tooltip__suggested {
+    position: relative;
+  }
+}

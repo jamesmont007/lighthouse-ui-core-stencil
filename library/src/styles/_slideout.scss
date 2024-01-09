@@ -1,0 +1,83 @@
+@import "st-variables";
+.overlay {
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.slideout {
+  top: 0;
+  right: 0;
+  z-index: 1030;
+  width: 100%;
+  max-width: 640px;
+  font-family: $font-family-base;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  &__header {
+    height: 70px;
+    padding: 0 30px;
+    background: $gray-6;
+  }
+  &__body {
+    padding: 30px;
+  }
+  &__footer {
+    margin: auto -30px -30px -30px;
+  }
+}
+
+/* SlideOut is open */
+.sideout-is-open {
+  overflow: hidden;
+  .slideout {
+    transform: translateX(0);
+  }
+  .overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+// modal left: TAM
+//@import '../../../../../@theme/variables.scss';
+
+.modal-left {
+  top: 0;
+  right: 0;
+  z-index: 1031;
+  min-width: 45%;
+  max-width: 50%;
+  box-shadow: -5px 0 5px 0 rgba(36,36,36,0.12);
+  border-radius: $border-radius 0 0 0;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  &-header {
+    background: $gray-6;
+    .icon {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+  &-space{
+    padding: 1.875rem;
+  }
+  &-content {
+    overflow-y: auto;
+  }
+}
+
+/* SideBar is open */
+.modal-is-open {
+  // overflow: hidden;
+  .modal-left {
+    transform: translateX(0);
+  }
+  .root {
+    filter: blur(8px);
+    transition: filter 0.4s;
+  }
+  .overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

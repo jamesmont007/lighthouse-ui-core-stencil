@@ -1,0 +1,27 @@
+@import "st-variables";
+
+.actions {
+  &__dropdown {
+    left: 50%;
+    display: none;
+    transform: translate(-50%);
+  }
+  &__list {
+    margin: 10px 0 0;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.26));
+    &::before {
+      content: "";
+      position: absolute;
+      top: -19px;
+      left: calc(50% - 10px);
+      border: 10px solid transparent;
+      border-bottom-color: $white;
+    }
+  }
+  &:hover .actions__dropdown {
+    display: block;
+  }
+  &__item:hover {
+    background: $gray-1;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">
+    Skill detail component
+  </h4>
+
+  <h5>Example</h5>
+
+  <div>
+    <st-core-skill-detail
+      [skill]="skill"
+      [levelsEnum]="getLevelToShow()">
+    </st-core-skill-detail>
+  </div>
+
+  <hr>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [skill] :
+      <pre>{{ skill | json }}</pre>
+    </li>
+
+    <li>
+      [levelsEnum] :
+      <pre>{{ getLevelToShow() | json }}</pre>
+    </li>
+
+  </ul>
+
+</div>

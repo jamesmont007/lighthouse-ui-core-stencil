@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import 'st-variables';
+
+$icons: 'edit', 'delete';
+
+.icon {
+  font-size: $font-size-500;
+  vertical-align: middle;
+  color: $red;
+  &:hover:not([disabled]) {
+    cursor: pointer;
+  }
+  &.disabled {
+    opacity: 0.5;
+    cursor: initial;
+    pointer-events: none;
+  }
+}
+
+.icon {
+  &.close-modal {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+
+@font-face {
+  font-family: "lh-perficient";
+  src:url("fonts/icons/lh-perficient.eot");
+  src:url("fonts/icons/lh-perficient.eot?#iefix") format("embedded-opentype"),
+    url("fonts/icons/lh-perficient.woff") format("woff"),
+    url("fonts/icons/lh-perficient.ttf") format("truetype"),
+    url("fonts/icons/lh-perficient.svg#lh-perficient") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "lh-perficient" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "lh-perficient" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-sort-up:before {
+  content: "\67";
+}
+.icon-book:before {
+  content: "\68";
+}
+.icon-calendar:before {
+  content: "\6a";
+}
+.icon-diamond:before {
+  content: "\6d";
+}
+.icon-export:before {
+  content: "\6e";
+}
+.icon-goal:before {
+  content: "\70";
+}
+.icon-comment-1:before {
+  content: "\71";
+}
+.icon-search:before {
+  content: "\78";
+}
+.icon-like-pos:before {
+  content: "\41";
+}
+.icon-like-neg-1:before {
+  content: "\42";
+}
+.icon-search-bold:before {
+  content: "\48";
+}
+.icon-star-neg-1:before {
+  content: "\4a";
+}
+.icon-trash:before {
+  content: "\4d";
+}
+.icon-champion:before {
+  content: "\4e";
+}
+.icon-comment:before {
+  content: "\50";
+}
+.icon-pen:before {
+  content: "\51";
+}
+.icon-people:before {
+  content: "\52";
+}
+.icon-client:before {
+  content: "\55";
+}
+.icon-person:before {
+  content: "\56";
+}
+.icon-close-1:before {
+  content: "\63";
+}
+.icon-menu:before {
+  content: "\64";
+}
+.icon-arrow-down:before {
+  content: "\62";
+}
+.icon-arrow-left:before {
+  content: "\66";
+}
+.icon-arrow-right:before {
+  content: "\69";
+}
+.icon-arrow-up:before {
+  content: "\6b";
+}
+.icon-check:before {
+  content: "\61";
+}
+.icon-minus:before {
+  content: "\65";
+}
+.icon-plus:before {
+  content: "\73";
+}
+.icon-cancel:before {
+  content: "\63";
+}
+.icon-clear{
+  background-image: url("../assets/icons/clear.svg");
+  background-size: $font-size-400 $font-size-400;
+  margin-right: 5px;
+  height: $font-size-400;
+  width: $font-size-400;
+}
+i{
+  display: inline-flex;
+}

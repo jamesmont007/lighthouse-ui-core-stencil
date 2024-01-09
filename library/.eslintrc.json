@@ -1,0 +1,86 @@
+{
+  "ignorePatterns": ["*.spec.tsx"],
+  "plugins": [
+    "@typescript-eslint",
+    "unused-imports"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@stencil/recommended",
+        "@ionic/eslint-config/recommended"
+      ],
+      "rules": {
+        "@stencil/element-type": "off",
+        "@stencil/required-jsdoc": "off",
+        "@stencil/own-methods-must-be-private": "off",
+        "@stencil/own-props-must-be-private": "off",
+        "@stencil/no-unused-watch": "off",
+        "@stencil/decorators-context": "off",
+        "@stencil/ban-prefix": "off",
+        "@stencil/dependency-suggestions": "off",
+        "@stencil/strict-boolean-conditions": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "warn",
+        "unused-imports/no-unused-vars": [
+          "warn",
+          { "vars": "all", "varsIgnorePattern": "^_", "args": "none", "argsIgnorePattern": "^_", "ignoreRestSiblings": true  }
+        ],
+        "@typescript-eslint/consistent-type-imports": "off",
+        "@typescript-eslint/no-empty-function": ["off"],
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/semi": ["warn", "always"],
+        "@typescript-eslint/no-extra-semi": "warn",
+        "@typescript-eslint/member-delimiter-style": ["warn", {
+          "multiline": {
+            "delimiter": "semi",
+            "requireLast": true
+          },
+          "singleline": {
+            "delimiter": "semi",
+            "requireLast": false
+          },
+          "multilineDetection": "brackets"
+        }],
+        "react/jsx-no-bind": "off",
+        "prefer-const": "error",
+        "eqeqeq": ["error", "always"],
+        "semi": "off",
+        "no-extra-semi": "error",
+        "quotes": ["warn", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+        "max-len": ["error", { "code": 140 }],
+        "object-curly-spacing": ["warn", "always"],
+        "no-restricted-imports": ["error", "rxjs/Rx"],
+        "guard-for-in": "error",
+        "eol-last": ["warn", "always"],
+        "curly": ["warn", "multi-line"],
+        "no-trailing-spaces": "warn",
+        "spaced-comment": ["warn", "always", {
+          "line": {
+              "markers": ["/"],
+              "exceptions": ["-", "+"]
+          },
+          "block": {
+              "markers": ["!"],
+              "exceptions": ["*"],
+              "balanced": true
+          }
+        }],
+        "arrow-body-style": ["warn", "as-needed"],
+        "no-useless-escape": "off"
+      }
+    }
+  ]
+}

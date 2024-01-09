@@ -1,0 +1,18 @@
+// Pagination styles
+.page-link {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  outline: 0;
+  color: $gray-6;
+  &:hover {
+    color: $gold;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}

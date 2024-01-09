@@ -1,0 +1,9 @@
+.spaced > *:not(:last-child) {
+  margin-right: 1em;
+}
+.spaced-vertical > *:not(:last-child) {
+  margin-bottom: 1em;
+}
+.bg-light.p-3.spaced-vertical {
+  border-radius: 8px;
+}

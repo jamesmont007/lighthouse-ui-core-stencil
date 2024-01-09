@@ -1,0 +1,45 @@
+:host {
+  .switch-skill {
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin: auto;
+    .switch-skill-input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &:not(:disabled) + span {
+        cursor: pointer;
+      }
+      &:checked + span {
+        background: $red;
+        &::before {
+          transform: translateX(10px);
+        }
+      }
+      &:disabled + span {
+        background: $gray-2;
+        opacity: 0.5;
+      }
+    }
+    .switch-skill-span {
+      box-sizing: border-box;
+      display: block;
+      padding: 2px;
+      width: 30px;
+      height: 20px;
+      background: $gray-2;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+      &::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: $white;
+        border-radius: 8px;
+        transition: transform 0.3s;
+      }
+    }
+  }
+}

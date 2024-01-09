@@ -1,0 +1,53 @@
+<div class="col-12">
+  <h4 class="pt-3 pb-3">
+    Select skill component
+  </h4>
+
+  <h5>Example</h5>
+
+  <st-core-select-skill-component
+    [name]="userName"
+    [searchSkillArray]="searchSkillArray"
+    (addSkillClick)="selectSkillHandler($event.detail)">
+  </st-core-select-skill-component>
+
+  <div class="alert alert-success"
+    role="alert">
+    <h4 class="alert-heading">
+      Result actions
+    </h4>
+    <p></p>
+    <hr>
+    <p class="mb-0">
+      <b>addSkillClick:</b> {{ selectSkillHandlerResult }}
+    </p>
+  </div>
+
+
+  <hr>
+
+  <h5>Data</h5>
+
+  <h6>Input</h6>
+
+  <ul>
+    <li>
+      [name] :
+      <pre>{{ userName }}</pre>
+    </li>
+
+    <li>
+      [searchSkillArray] :
+      <pre>{{ searchSkillArray | json }}</pre>
+    </li>
+  </ul>
+
+  <h6>Output</h6>
+
+  <ul>
+    <li>
+      (addSkillClick) : selectSkillHandler
+    </li>
+  </ul>
+
+</div>

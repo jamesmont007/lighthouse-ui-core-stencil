@@ -1,0 +1,130 @@
+@mixin text-style($color) {
+  color: $color;
+  font-style: normal;
+  font-size: $font-size-300;
+  line-height: normal;
+  font-weight: 400;
+}
+
+:host {
+  .table {
+      margin-bottom: 1rem;
+
+    &-head {
+      &-row {
+        display: flex;
+        align-items: center;
+        background-color: $blue-4;
+        border: 1px solid $gray-2;
+        &-icons{
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-weight: 400;
+          font-size: 1rem;
+          img {
+            width: 1rem;
+            height: 0.8rem;
+            cursor: pointer;
+          }
+        }
+        &-info {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1rem;
+        }
+        &__goal {
+          display: flex;
+          width: 25%;
+          align-items: center;
+          &-title {
+            padding-left: 10px;
+          }
+        }
+      }
+      &__select{
+        font-size: $font-size-200 !important;
+      }
+    }
+    &--w-75{
+      width: 75%;
+    }
+    &--w-25{
+      width: 25%;
+    }
+    &--w-15 {
+      width: 15%;
+    }
+    &--w-10 {
+      width: 10%;
+    }
+    &--w-5 {
+      width: 5%;
+    }
+
+    .drag-icon {
+      background-image: url('assets/icons/drag_indicator.svg');
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .bg-gray{
+    background: $gray-2;
+  }
+
+  .red-text {
+    @include text-style($red);
+    cursor: pointer;
+  }
+
+  .gray-text{
+    @include text-style(#58595B);
+  }
+  
+  .black-text{
+    @include text-style($black);
+  }
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  opacity: unset;
+  z-index: unset;
+}
+
+/* Tooltip text */
+.tooltip .tooltipText {
+  visibility: hidden;
+  width: 100%;
+  background-color: $gray-5;
+  color: $white;
+  text-align: center;
+  padding: 3%;
+  border-radius: 6%;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: thick;
+  border-style: solid;
+  border-color: $gray-5 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}

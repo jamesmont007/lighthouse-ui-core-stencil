@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+.finished-plan {
+  padding: $font-size-200 $font-size-300;
+  &-header {
+    &__title {
+      font-size: 2rem;
+      color: $red;
+    }
+    &-body{
+      display: flex;
+      justify-content: space-between;
+      &-projection {
+        width: 50%;
+        &-info{
+          margin-bottom: $font-size-050;
+          &__title{
+            font-weight: bold;
+            font-size: $font-size-200;
+          }
+        }
+      }
+      &--pd{
+        padding: 1rem;
+      }
+    }
+  }
+
+  &-table {
+    margin-top: 2rem;
+    &__tr {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+tbody{
+  .btn-show-details{
+    padding: 0;
+    min-width: 0;
+    margin-left: 1rem;
+  }
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.link-info{
+  color: $red;
+  font-size: $font-size-300;
+  cursor: pointer;
+}

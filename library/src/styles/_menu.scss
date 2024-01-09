@@ -1,0 +1,53 @@
+// Menu
+.megamenu {
+  span {
+    cursor: pointer;
+  }
+  &:hover {
+    span {
+      color: $gold;
+      background: $black;
+    }
+    .megadropdown {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+// Dropdown
+.megadropdown {
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  color: $black;
+  transform: translateX(-50%);
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: -24px;
+    left: calc(50% - 12px);
+    border: 12px solid transparent;
+    border-bottom-color: $gray-3;
+  }
+  .col {
+    min-width: 320px;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2;
+    color: inherit;
+    border-bottom: 1px solid $red;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: $gold;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import 'st-variables';
+
+[hidden] {
+  display: none;
+}
+
+body {
+  color: $gray-6 !important;
+  font-weight: 400;
+  font-size: $font-size-200;
+  font-family: $font-family-base;
+  line-height: 19px;
+  p,
+  span,
+  td,
+  li {
+    font-family: $font-family-base;
+    font-size: $font-size-200;
+    line-height: 19px;
+  }
+  h1 {
+    font-size: $font-size-700;
+    font-weight: 900;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: $font-size-600;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  h3 {
+    font-size: $font-size-400;
+    font-weight: 900;
+    line-height: 25px;
+  }
+  h4 {
+    font-size: $font-size-200;
+    font-weight: 900;
+    line-height: 19px;
+  }
+  h5 {
+    font-size: $font-size-050;
+    font-weight: 900;
+    line-height: 16px;
+  }
+ 
+}
+
+input select textarea {
+  background-color: $gray-1;
+  border: 1px solid $gray-2;
+  border-radius: $border-radius;
+  font-size: $font-size-200;
+  &:focus {
+    background-color: $gray-1;
+    border: 1px solid $gold;
+    box-shadow: none;
+  }
+  &:disabled {
+    box-sizing: border-box;
+    background-color: $gray-1;
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

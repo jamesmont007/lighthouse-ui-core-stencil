@@ -1,0 +1,169 @@
+// back button section wrapper
+.btn-go-back,
+.btn-go-back .material-icons {
+  color: $red;
+  cursor: pointer;
+  font-size: smaller;
+}
+
+.column-left {
+  border-right: 1px solid $gray-3; // box border
+}
+
+.scrollable-x {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  .table {
+    width: calc(100% - 1px); /* Fix */
+    margin-bottom: 0;
+  }
+}
+
+// breadcumb TAM
+.breadcrumb {
+  font-family: $font-family-base;
+  font-size: $font-size-050;
+  background: transparent;
+}
+.breadcrumb-item {
+  font-weight: bold;
+  a {
+    font-weight: normal;
+    text-decoration: none;
+    &:not(:hover) {
+      color: inherit;
+    }
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "\276F";
+  font-size: 10px;
+}
+
+/* Create appointment*/
+.select {
+  cursor: pointer;
+  &:hover {
+    background-color: #f8f8f8;
+  }
+}
+.candidateList {
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+/*schedule analisis: report?*/
+
+.config-areas-custom-select {
+  width: 120px;
+}
+
+.padding-action {
+  margin-left: 5rem;
+}
+
+.tooltip-action-suggested{
+  position: absolute;
+  left: 1rem;
+}
+
+.tooltip-text{
+  position: relative;
+}
+
+.report {
+  .table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  th {
+    padding-right: 1em;
+    white-space: nowrap;
+  }
+  td:first-child {
+    min-width: 240px;
+  }
+}
+
+table.schedule-analysis {
+  td {
+    &:not(.text-nowrap) > .text-cell {
+      display: inline-block;
+      text-align: right;
+      width: 32px;
+    }
+    .circle-lights {
+      border-radius: 50%;
+      display: inline-block;
+      height: 10px;
+      margin-left: 0.5rem;
+      width: 10px;
+      &.green {
+        background-color: $green;
+      }
+      &.red {
+        background-color: $red;
+      }
+      &.yellow {
+        background-color: $yellow;
+      }
+    }
+  }
+}
+
+// folders interviews areas
+
+.rct-node {
+  margin: 5px 0;
+}
+.rct-collapse,
+.rct-checkbox,
+.rct-node-icon {
+  vertical-align: middle;
+  line-height: 1;
+}
+.rct-checkbox {
+  color: $red;
+}
+.rct-node-icon {
+  color: $gray-4;
+}
+.rct-title {
+  padding: 0 5px 0 8px;
+}
+.react-checkbox-tree {
+  label:hover,
+  label:active {
+    background: $gray-2;
+    text-decoration: underline;
+    color: $gold;
+  }
+}
+
+//data-list
+.list-group { 
+  position: absolute;
+  border-radius: .25rem;
+  background-color: $white;
+  z-index: 100;
+  box-shadow: 0px 5px 7px -5px rgba(0,0,0,0.6);
+  &__item {
+    cursor: pointer !important;
+    font-weight: 700;
+    font-size: $font-size-200;
+    letter-spacing: -0.39px;
+    line-height: 19px;
+    padding: .25rem 1.5rem;
+    &:hover {
+      background-color: $blue;
+    }
+    &:first-child {
+      padding-top: .75rem;
+    }
+    &:last-child {
+      padding-bottom: .75rem;
+    }
+  }
+}

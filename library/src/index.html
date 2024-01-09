@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <style>
+    header {
+      background: #010101;
+    }
+
+    aside {
+      flex: 0 0 240px;
+    }
+
+    aside .btn-link {
+      color: #444444;
+    }
+
+    aside .btn-link:hover {
+      color: #B79967;
+    }
+
+    main {
+      background-color: #f8f8f8;
+    }
+
+    .form-control {
+      background-color: #f8f8f8 !important;
+      border: none !important;
+      border-bottom: 1px solid #D1D3D4 !important;
+      border-radius: 0;
+      color: #58595B;
+      font-size: 0.875rem;
+      height: auto;
+      min-height: 2.5rem;
+      padding: 0.5rem 1.25rem;
+      letter-spacing: 0.3px;
+    }
+
+    .form-control:focus {
+      background-color: #f8f8f8 !important;
+      box-shadow: none !important;
+    }
+
+  </style>
+  <script type="module" src="/build/lighthouse-ui-core-stencil.esm.js"></script>
+  <script nomodule src="/build/lighthouse-ui-core-stencil.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header class="px-5 py-3 border-bottom text-white">
+    <h1 class="h1">Stencil UI Core</h1>
+  </header>
+  <!-- Main layout -->
+  <div class="d-flex flex-grow-1">
+    <aside class="p-3 border-right shadow">
+      <h5 class="h5">Components</h5>
+      <input id="search-component" type="text" placeholder="Component name..." class="form-control mt-3 mb-3" />
+      <nav class="d-flex flex-column">
+        <button class="btn btn-link text-left" data-skill="st-core-switch-input">
+          Switch
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-select-skill">
+          Select Skill
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-select-template">
+          Select Template
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-skill-detail">
+          Skill Detail
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-skill-evaluation">
+          Evaluation
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-autocomplete">
+          Autocomplete
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-breadcrumbs">
+          Breadcrumbs
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-form-input">
+          Form Input
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-modal">
+          Modal
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-dropdown">
+          Dropdown
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-tags-inputs">
+          Tags Inputs
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-table">
+          Table
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-date-picker">
+          Date Picker
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-selector">
+          Selector
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-toast">
+          Toast
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-tooltip">
+          Tooltip
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-paginator">
+          Paginator
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-radar">
+          Radar
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-skill-table">
+          Skill table
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-skillset-table">
+          Explore SkillsSets
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-profile-table">
+          Profile table
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-growth-plan">
+          Growth Plan
+        </button>
+        <button class="btn btn-link text-left" data-skill="st-core-finished-growth-plan">
+          Finished Growth Plan Table
+        </button>
+      </nav>
+    </aside>
+    <main class="flex-grow-1 p-4">
+      <p>Librería de componentes en stencil para LightHouse y TAM</p>
+      <div id="toRender"></div>
+    </main>
+  </div>
+  <!-- Nav script -->
+  <script src="./script.js"></script>
+  <script>
+    const input = document.querySelector('#search-component');
+    const components = document.querySelectorAll('button.btn-link');
+    input.addEventListener('keyup', (event) => {
+      const text = event.target.value;
+      const pat = new RegExp(text, 'i');
+      for (let i = 0; i < components.length; i++) {
+        const item = components[i];
+        if (pat.test(item.innerText)) {
+          item.classList.remove("d-none");
+        }
+        else {
+          item.classList.add("d-none");
+        }
+      }
+    });
+    input.addEventListener('focusout', (event) => {
+      const timeout = setTimeout(() => {
+        event.target.value = '';
+        for (let i = 0; i < components.length; i++) {
+          const item = components[i];
+          if (item.classList.contains("d-none")) {
+            item.classList.remove("d-none");
+          }
+        }
+      }, 400);
+    });
+  </script>
+</body>
+
+</html>

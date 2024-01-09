@@ -1,0 +1,31 @@
+:host {
+  display: block;
+
+  .english-level-rating {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      border: none;
+      outline: none;
+      background: none;
+
+      .button--img {
+        &__md {
+          width: 2.2rem;
+          height: 2.1rem;
+        }
+
+        &__sm {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        &__xs {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+}

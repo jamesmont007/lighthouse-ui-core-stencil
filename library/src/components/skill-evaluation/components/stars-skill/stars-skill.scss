@@ -1,0 +1,38 @@
+@mixin btn-star {
+  border: none;
+  background: none;
+}
+:host {
+  .stars-container {
+    .btn-star {
+      @include btn-star();
+      ::ng-deep button.btn {
+        cursor: default;
+      }
+    }
+
+    .star-hidden {
+      display: none;
+    }
+
+    .btn-star-defined{
+      @include btn-star();
+      cursor: default;
+    }
+    
+    img.star-md {
+      width: 2.2rem;
+      height: 2.1rem;
+    }
+
+    img.star-sm {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    img.star-xs {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

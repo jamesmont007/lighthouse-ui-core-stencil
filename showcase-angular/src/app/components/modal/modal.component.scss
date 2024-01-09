@@ -1,0 +1,30 @@
+:host {
+  st-core-modal::part(dialog) {
+    top: 0;
+    right: 0;
+    z-index: 1031;
+    min-width: 45%;
+    max-width: 50%;
+    box-shadow: -5px 0 5px 0 rgba(36,36,36,0.12);
+    border-radius: 0.125rem 0 0 0;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .modal-header {
+    background-color: #42d9fc;
+    height: 70px;
+    padding: 21px 40px;
+  }
+
+  .modal-footer {
+    box-sizing: border-box;
+    height: 106px;
+    border: 1px solid #e2e0e8;
+    background-color: #f7f8fb;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+// TAM: table styles
+.card.card-table {
+  padding: 1.875rem;
+  box-shadow: 0 2px 5px 0 rgba(36, 36, 36, 0.15);
+  border: none;
+  border-radius: $border-radius;
+  background-color: $white;
+}
+
+.table {
+  background-color: $white;
+  width: calc(100% - 2px);
+  margin: 0;
+  thead {
+    th {
+      border: none !important;
+      vertical-align: middle;
+      font-size: $font-size-200;
+      border-bottom: none !important;
+    }
+  }
+  tbody {
+    border: 1px solid $gray-2;
+    color: $gray-6;
+    td {
+      text-align: left;
+      vertical-align: middle;
+      padding: 0.938rem;
+      border-top: 1px solid $gray-2;
+      &:first-of-type{
+        padding-left: 1.25rem;
+      }
+    }
+  }
+  tr {
+    &.bg-light {
+      background-color: lighten($color: $gray-1, $amount: 2) !important;
+    }
+  }
+  .is-grouped td {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .is-link a {
+    color: $black;
+    font-weight: 700;
+    &:hover{
+      color: $gold;
+    }
+  }
+}
+
+// Interviewers table
+.interviewers-table td {
+  vertical-align: initial;
+}
+.top-bar .input-search {
+  margin-right: 1rem;
+}
+
+// candidates
+
+.candidates table {
+  th:nth-child(4),
+  td:nth-child(4) {
+    text-align: center;
+  }
+  a {
+    color: $black;
+    font-weight: bold;
+    &:hover{
+      color: $gold;
+      text-decoration: underline;
+    }
+  }
+}

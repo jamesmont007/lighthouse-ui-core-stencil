@@ -1,0 +1,336 @@
+@import "st-variables";
+
+// Adjusted bootstrap forms
+.form-label {
+  color: $black;
+}
+
+.form-control,
+.custom-select {
+  background-color: $gray-1 !important;
+  border: none !important;
+  border-bottom: 1px solid $gray-3 !important;
+  border-radius: 0;
+  color: $gray-5;
+  font-size: $font-size-200;
+  height: auto;
+  min-height: 2.5rem;  
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.3px;
+  &:placeholder {
+    font-weight: lighter;
+    color: $gray-5;
+  }
+  &:focus{
+    border: none;
+    border-bottom: 1px solid $gray-3;
+    background-color: $gray-1 !important;
+    box-shadow: none !important;
+  }
+  &:disabled,
+  &.disabled,
+  &.disable,
+  &[readonly] {
+    border-bottom-color: $gray-3 !important;
+    color: $gray-5;
+    background-color: $white !important;
+    border-color: $gray-3 !important;
+  }
+  &.form-control-output{
+    background-color: transparent !important;
+    color: $gray-6;
+    text-transform: uppercase;
+    padding: 0.5rem 0.616rem;
+    line-height: 1.3rem;
+  }
+  &-light{
+    background-color: $white !important;
+    &:focus{
+      background-color: $white !important;
+    }
+  }
+  &-error{
+    background-color: rgba($red-1, 0.05);
+    border-bottom-color: $red-1;
+  }
+  &-success{
+    background-color: rgba($green, 0.05);
+    border-bottom-color: $green;
+  }
+}
+
+
+.form-header {
+  background-color: $white !important;
+}
+.form-header:disabled,
+.form-header.disabled,
+.form-header.disable,
+.form-header[readonly] {
+  color: $black !important;
+  background-color: $gray-3 !important;
+}
+
+textarea.form-control {
+  min-height: 4.375rem;
+}
+
+.form-group {
+  margin-bottom: 1.875rem;
+  position: relative;
+  &__label{
+    font-size: $font-size-200;
+    font-family: $font-family-bold;
+    font-weight: normal;
+    color: $black;
+    display: block;
+    margin-bottom: 0.938rem;
+  }
+  br{
+    display: none;
+  }
+  &.required label::after {
+    content: " *";
+    font-weight: bold;
+    color: $red;
+  }
+}
+
+// Select background arrow
+select.form-control,
+.custom-select {
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid $gray-3;
+  background: $gray-1
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='%23CC1F20'/%3E%3C/svg%3E")
+    no-repeat right 5px center / 18px;
+  &:disabled {
+    background: $white
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' /%3E%3C/svg%3E")
+      no-repeat right 5px center / 18px;
+  }
+  &.is-invalid {
+    background: $gray-1
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z' fill='red' /%3E%3C/svg%3E")
+      no-repeat right 5px center / 18px;
+  }
+}
+
+// Radio button
+.custom-radio {
+  .custom-control-label {
+    cursor: pointer;
+    &::before,
+    &::after {
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+    &::before {
+      background: transparent;
+      border: 1px solid $red;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $red;
+      box-shadow: 0 0 0 2px $white inset;
+    }
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+// TAM Datepicker
+.datepicker {
+  [type="date"] {
+    appearance: none;
+  }
+  [type="date"]::-webkit-inner-spin-button,
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  i {
+    right: 10px;
+    pointer-events: none;
+    font-size: 16px;
+  }
+}
+
+//TAM Checkbox
+/* The container */
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  margin: 0px 20px 20px 0px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: no-drop;
+  }
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  box-shadow: $standard-shadow;
+  border-radius: $border-radius;
+  border: 1px solid $gray-3;
+  background-color: $gray-1;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  border: 0.05px solid $red;
+  box-shadow: 0 0 1px $red;
+}
+
+/* When the checkbox is checked, add a white background */
+.checkbox-container input:checked ~ .checkmark {
+  border: 0.05px solid $red;
+  box-shadow: 0 0 1px $red;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 10px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid $red-1;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* input autocomplete- suggestions*/
+.no-suggestion {
+  padding: 0.5rem;
+}
+
+.suggestion {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  border-radius: 8px;
+  list-style: none;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 100%;
+  border-color: $gold;
+  background-color: $white;
+  width: calc(242px + 1rem);
+  z-index: 1;
+}
+
+.suggestion li {
+  padding: 0.5rem;
+}
+
+.suggestion-active,
+.suggestion li:hover {
+  background-color: $gray-2;
+  color: $black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestion li:not(:last-of-type) {
+  border-bottom: 1px solid $gray-3;
+}
+
+/* auto complete TAM*/
+
+.suggestions {
+  position: absolute;
+  border-radius: 0px 0px 8px 8px;
+  border-color: #F7F8FB;
+  z-index: 1;
+  background-color: #FFF;
+  margin: 3px auto;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-left: 0;
+  list-style-type: disc;
+  box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.1);
+  li {
+    padding: 0.75rem;
+    text-align: left;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $gray-2;
+    }
+    &:hover {
+      color: $gold;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+}
+
+// Candidate Form
+.candidate-form {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.add-candidate-form > label {
+  margin-bottom: 1rem;
+}
+
+.required-field::after {
+  content: ' *';
+  font-weight: bold;
+  color: #ff4154;
+}
+
+.input-text {
+  font-size: $font-size-300; 
+  color: $gray-6;
+}

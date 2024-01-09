@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.forms-table{
+  tr td{
+    border: 0 !important;
+  }
+  .delete-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $red;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+  
+}
