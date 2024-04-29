@@ -15,14 +15,6 @@
 | `text`                | `text`                  |             | `string`  | `''`        |
 
 
-## Shadow Parts
-
-| Part              | Description |
-| ----------------- | ----------- |
-| `"tooltip-skill"` |             |
-| `"tooltip-text"`  |             |
-
-
 ## Dependencies
 
 ### Used by
@@ -32,8 +24,6 @@
 ### Graph
 ```mermaid
 graph TD;
-  st-core-commitment-component --> st-core-tooltip-skill
-  st-core-goal-component --> st-core-tooltip-skill
   st-core-skill-evaluation --> st-core-tooltip-skill
   style st-core-tooltip-skill fill:#f9f,stroke:#333,stroke-width:4px
 ```

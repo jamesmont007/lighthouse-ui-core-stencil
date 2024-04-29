@@ -24,13 +24,6 @@
 | `selectElements` |             | `CustomEvent<string[]>` |
 
 
-## Shadow Parts
-
-| Part              | Description |
-| ----------------- | ----------- |
-| `"auto-complete"` |             |
-
-
 ## Dependencies
 
 ### Depends on

@@ -47,10 +47,8 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  st-core-commitment-component --> st-core-date-picker
   st-core-finished-growth-plan --> st-core-date-picker
   st-core-goal --> st-core-date-picker
-  st-core-goal-component --> st-core-date-picker
   st-core-skill-evaluation --> st-core-date-picker
   style st-core-date-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```

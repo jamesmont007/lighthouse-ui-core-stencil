@@ -40,13 +40,6 @@ Type: `Promise<void>`
 
 
 
-## Shadow Parts
-
-| Part              | Description |
-| ----------------- | ----------- |
-| `"auto-complete"` |             |
-
-
 ## Dependencies
 
 ### Used by

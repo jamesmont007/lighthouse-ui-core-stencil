@@ -25,13 +25,6 @@
 | `sendAscOrder` |             | `CustomEvent<boolean>` |
 
 
-## Shadow Parts
-
-| Part     | Description |
-| -------- | ----------- |
-| `"text"` |             |
-
-
 ## Dependencies
 
 ### Used by

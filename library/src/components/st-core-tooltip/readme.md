@@ -29,14 +29,6 @@ Type: `Promise<void>`
 
 
 
-## Shadow Parts
-
-| Part              | Description |
-| ----------------- | ----------- |
-| `"invisible-div"` |             |
-| `"tooltip-card"`  |             |
-
-
 ## Dependencies
 
 ### Used by

@@ -36,9 +36,7 @@
 ### Graph
 ```mermaid
 graph TD;
-  st-core-commitment-component --> st-core-selector
   st-core-goal --> st-core-selector
-  st-core-goal-component --> st-core-selector
   st-core-paginator --> st-core-selector
   st-core-skill-evaluation --> st-core-selector
   style st-core-selector fill:#f9f,stroke:#333,stroke-width:4px

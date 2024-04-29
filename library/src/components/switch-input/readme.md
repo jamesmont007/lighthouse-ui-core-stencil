@@ -23,16 +23,6 @@
 | `switchHandler` |             | `CustomEvent<boolean>` |
 
 
-## Shadow Parts
-
-| Part             | Description |
-| ---------------- | ----------- |
-| `"switch-input"` |             |
-| `"switch-label"` |             |
-| `"switch-span"`  |             |
-| `"switch-text"`  |             |
-
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

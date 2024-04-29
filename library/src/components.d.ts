@@ -5,13 +5,13 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ActionGoalSuggestedModel, ActionModel, DueDateModel, ErrorsModel, GoalModel, PlanModel, StateModel, SubCategoriActionModel } from "./models/goal.model";
-import { IBreadcrumbItem } from "./components/breadcrumbs/models/breadcrumbs.interface";
-import { FormModel, OptionsModel, SelfAssessmentModel, SkillModel, SortEvent, TemplateFilter, UserModel, UserSkillModel } from "./models";
-import { ColorsStatus } from "./components/st-core-radar/models";
-import { AssesFormat, SkillItem } from "./utils/interfaces";
-import { OptionsModel as OptionsModel1 } from "./models/options.model";
-import { SortEvent as SortEvent1 } from "./models/sort-event.model";
+import { ActionGoalSuggestedModel, ActionModel, DueDateModel, ErrorsModel, GoalModel, PlanModel, StateModel, SubCategoriActionModel, } from "./models/goal.model";
+import { IBreadcrumbItem, } from "./components/breadcrumbs/models/breadcrumbs.interface";
+import { FormModel, OptionsModel, SelfAssessmentModel, SkillModel, SortEvent, TemplateFilter, UserModel, UserSkillModel, } from "./models";
+import { ColorsStatus, } from "./components/st-core-radar/models";
+import { AssesFormat, SkillItem, } from "./utils/interfaces";
+import { OptionsModel as OptionsModel1, } from "./models/options.model";
+import { SortEvent as SortEvent1, } from "./models/sort-event.model";
 export namespace Components {
     interface StCoreActionCard {
         "action": SubCategoriActionModel;
@@ -67,7 +67,7 @@ export namespace Components {
     interface StCoreEnglishLevelSkill {
         "disabled": boolean;
         "level": number | undefined;
-        "size": 'sm' | 'md' | 'xs';
+        "size": "sm" | "md" | "xs";
     }
     interface StCoreFinishedGrowthPlan {
         "finishedPlan": PlanModel;
@@ -105,11 +105,20 @@ export namespace Components {
         "totalItems": number;
     }
     interface StCorePlanList {
-        "goalsToRender": { state: number; goals: GoalModel[] }[];
+        "goalsToRender": {
+            state: number;
+            goals: GoalModel[];
+        }[];
         "mentorMode": boolean;
     }
     interface StCoreProfileTable {
-        "data": { discipline: string; forms: { id: string; name: string }[] }[];
+        "data": {
+            discipline: string;
+            forms: {
+                id: string;
+                name: string;
+            }[];
+        }[];
         "isAdmin": boolean;
     }
     interface StCoreRadar {
@@ -136,7 +145,7 @@ export namespace Components {
         "classSelect": string;
         "isDisabled": boolean;
         "name": string;
-        "options": OptionsModel1[];
+        "options": OptionsModel[];
         "placeholder": string;
         "selected": any;
         "value": any;
@@ -155,9 +164,9 @@ export namespace Components {
     }
     interface StCoreSkillDetail {
         "info": {
-    userSkill: UserSkillModel;
-    index: number;
-  };
+            userSkill: UserSkillModel;
+            index: number;
+        };
         "levelsEnum": any;
     }
     interface StCoreSkillEvaluation {
@@ -193,13 +202,16 @@ export namespace Components {
         "position": string;
         "resetStars": () => Promise<void>;
         "showZeroLevel": boolean;
-        "size": 'sm' | 'md' | 'xs';
+        "size": "sm" | "md" | "xs";
     }
     interface StCoreSwitchInput {
         "dataAutomation": string;
         "readOnly": boolean;
-        "size": 'normal' | 'small' | 'x-small';
-        "texts": { enabled: string; disabled: string };
+        "size": "normal" | "small" | "x-small";
+        "texts": {
+            enabled: string;
+            disabled: string;
+        };
         "value": boolean;
     }
     interface StCoreSwitchSkill {
@@ -239,7 +251,7 @@ export namespace Components {
         "handlerChangeVisibility": () => Promise<void>;
         "isDisabled": boolean;
         "positionTooltip": string;
-        "size": 'md' | '';
+        "size": "md" | "";
     }
     interface StCoreTooltipSkill {
         "hasDescriptionClass": boolean;
@@ -247,110 +259,6 @@ export namespace Components {
         "suggested": boolean;
         "text": string;
     }
-}
-export interface StCoreActionCardCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreActionCardElement;
-}
-export interface StCoreAutocompleteCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreAutocompleteElement;
-}
-export interface StCoreAutocompleteTagsCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreAutocompleteTagsElement;
-}
-export interface StCoreBoardCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreBoardElement;
-}
-export interface StCoreBreadcrumbsCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreBreadcrumbsElement;
-}
-export interface StCoreDatePickerCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreDatePickerElement;
-}
-export interface StCoreDropdownCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreDropdownElement;
-}
-export interface StCoreEnglishLevelSkillCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreEnglishLevelSkillElement;
-}
-export interface StCoreFinishedGrowthPlanCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreFinishedGrowthPlanElement;
-}
-export interface StCoreFormInputCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreFormInputElement;
-}
-export interface StCoreGoalCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreGoalElement;
-}
-export interface StCoreGrowthPlanCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreGrowthPlanElement;
-}
-export interface StCorePaginatorCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCorePaginatorElement;
-}
-export interface StCorePlanListCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCorePlanListElement;
-}
-export interface StCoreProfileTableCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreProfileTableElement;
-}
-export interface StCoreSelectSkillCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSelectSkillElement;
-}
-export interface StCoreSelectTemplateCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSelectTemplateElement;
-}
-export interface StCoreSelectorCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSelectorElement;
-}
-export interface StCoreSelfAssessmentTooltipCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSelfAssessmentTooltipElement;
-}
-export interface StCoreSkillEvaluationCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSkillEvaluationElement;
-}
-export interface StCoreSkillTableCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSkillTableElement;
-}
-export interface StCoreSortCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSortElement;
-}
-export interface StCoreStarsSkillCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreStarsSkillElement;
-}
-export interface StCoreSwitchInputCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreSwitchInputElement;
-}
-export interface StCoreTagCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreTagElement;
-}
-export interface StCoreTagsInputsCustomEvent<T> extends CustomEvent<T> {
-    detail: T;
-    target: HTMLStCoreTagsInputsElement;
 }
 declare global {
     interface HTMLStCoreActionCardElement extends Components.StCoreActionCard, HTMLStencilElement {
@@ -604,10 +512,10 @@ declare global {
 declare namespace LocalJSX {
     interface StCoreActionCard {
         "action"?: SubCategoriActionModel;
-        "onActionAccepted"?: (event: StCoreActionCardCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionInfo"?: (event: StCoreActionCardCustomEvent<string>) => void;
-        "onActionRejected"?: (event: StCoreActionCardCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onEditAction"?: (event: StCoreActionCardCustomEvent<SubCategoriActionModel>) => void;
+        "onActionAccepted"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionInfo"?: (event: CustomEvent<string>) => void;
+        "onActionRejected"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onEditAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
     }
     interface StCoreAutocomplete {
         "data"?: any[];
@@ -615,8 +523,8 @@ declare namespace LocalJSX {
         "emitMode"?: boolean;
         "inputClassField"?: string;
         "isDisabled"?: boolean;
-        "onInputValue"?: (event: StCoreAutocompleteCustomEvent<any>) => void;
-        "onSelectValue"?: (event: StCoreAutocompleteCustomEvent<any>) => void;
+        "onInputValue"?: (event: CustomEvent<any>) => void;
+        "onSelectValue"?: (event: CustomEvent<any>) => void;
         "searchLength"?: number;
         "value"?: string;
         "valueField"?: string;
@@ -624,7 +532,7 @@ declare namespace LocalJSX {
     interface StCoreAutocompleteTags {
         "canEnter"?: boolean;
         "cleanFilter"?: any[];
-        "onSelectElements"?: (event: StCoreAutocompleteTagsCustomEvent<string[]>) => void;
+        "onSelectElements"?: (event: CustomEvent<string[]>) => void;
         "placeholder"?: string;
         "searchLength"?: number;
         "tags"?: string[];
@@ -633,27 +541,27 @@ declare namespace LocalJSX {
     interface StCoreBoard {
         "actionsToRender"?: ActionModel;
         "mentorMode"?: boolean;
-        "onActionSuggestedAcceptedBoard"?: (event: StCoreBoardCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionSuggestedRejectedBoard"?: (event: StCoreBoardCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onCardMoved"?: (event: StCoreBoardCustomEvent<StateModel>) => void;
-        "onEditDoingAction"?: (event: StCoreBoardCustomEvent<SubCategoriActionModel>) => void;
-        "onEditDoneAction"?: (event: StCoreBoardCustomEvent<SubCategoriActionModel>) => void;
-        "onEditSuspendedDeclinedAction"?: (event: StCoreBoardCustomEvent<SubCategoriActionModel>) => void;
-        "onEditToDoAction"?: (event: StCoreBoardCustomEvent<SubCategoriActionModel>) => void;
-        "onErrorsList"?: (event: StCoreBoardCustomEvent<ErrorsModel>) => void;
-        "onGoalSuggestedAcceptedBoard"?: (event: StCoreBoardCustomEvent<string>) => void;
-        "onGoalSuggestedRejectedBoard"?: (event: StCoreBoardCustomEvent<string>) => void;
-        "onShowActionInfoBoard"?: (event: StCoreBoardCustomEvent<string>) => void;
-        "onShowAddActionList"?: (event: StCoreBoardCustomEvent<GoalModel>) => void;
-        "onShowGoalInfoList"?: (event: StCoreBoardCustomEvent<string>) => void;
-        "onUpdateActionDateList"?: (event: StCoreBoardCustomEvent<DueDateModel>) => void;
-        "onUpdateActionStateList"?: (event: StCoreBoardCustomEvent<StateModel>) => void;
-        "onUpdateGoalDateList"?: (event: StCoreBoardCustomEvent<DueDateModel>) => void;
-        "onUpdateGoalStateList"?: (event: StCoreBoardCustomEvent<StateModel>) => void;
+        "onActionSuggestedAcceptedBoard"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionSuggestedRejectedBoard"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onCardMoved"?: (event: CustomEvent<StateModel>) => void;
+        "onEditDoingAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
+        "onEditDoneAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
+        "onEditSuspendedDeclinedAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
+        "onEditToDoAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
+        "onErrorsList"?: (event: CustomEvent<ErrorsModel>) => void;
+        "onGoalSuggestedAcceptedBoard"?: (event: CustomEvent<string>) => void;
+        "onGoalSuggestedRejectedBoard"?: (event: CustomEvent<string>) => void;
+        "onShowActionInfoBoard"?: (event: CustomEvent<string>) => void;
+        "onShowAddActionList"?: (event: CustomEvent<GoalModel>) => void;
+        "onShowGoalInfoList"?: (event: CustomEvent<string>) => void;
+        "onUpdateActionDateList"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateActionStateList"?: (event: CustomEvent<StateModel>) => void;
+        "onUpdateGoalDateList"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateGoalStateList"?: (event: CustomEvent<StateModel>) => void;
     }
     interface StCoreBreadcrumbs {
         "isValidation"?: boolean;
-        "onBreadcrumbsClick"?: (event: StCoreBreadcrumbsCustomEvent<IBreadcrumbItem>) => void;
+        "onBreadcrumbsClick"?: (event: CustomEvent<IBreadcrumbItem>) => void;
         "paths"?: IBreadcrumbItem[];
     }
     interface StCoreDatePicker {
@@ -661,7 +569,7 @@ declare namespace LocalJSX {
         "isDisabled"?: boolean;
         "max"?: string;
         "min"?: string;
-        "onChangeDate"?: (event: StCoreDatePickerCustomEvent<any>) => void;
+        "onChangeDate"?: (event: CustomEvent<any>) => void;
         "value"?: string;
     }
     interface StCoreDropdown {
@@ -672,35 +580,38 @@ declare namespace LocalJSX {
         "isImg"?: boolean;
         "isOneRegister"?: boolean;
         "list"?: any[];
-        "onInputHandle"?: (event: StCoreDropdownCustomEvent<string>) => void;
-        "onSelections"?: (event: StCoreDropdownCustomEvent<any>) => void;
+        "onInputHandle"?: (event: CustomEvent<string>) => void;
+        "onSelections"?: (event: CustomEvent<any>) => void;
         "searchLength"?: number;
         "valueFilter"?: string;
     }
     interface StCoreEnglishLevelSkill {
         "disabled"?: boolean;
         "level"?: number | undefined;
-        "onSelectedLevel"?: (event: StCoreEnglishLevelSkillCustomEvent<{ level: number | undefined; label: string | undefined } | undefined>) => void;
-        "size"?: 'sm' | 'md' | 'xs';
+        "onSelectedLevel"?: (event: CustomEvent<{
+            level: number | undefined;
+            label: string | undefined;
+        } | undefined>) => void;
+        "size"?: "sm" | "md" | "xs";
     }
     interface StCoreFinishedGrowthPlan {
         "finishedPlan"?: PlanModel;
-        "onFilters"?: (event: StCoreFinishedGrowthPlanCustomEvent<{
-    goal: string;
-    state: string;
-    startDate: string;
-    endDate: string;
-  }>) => void;
-        "onShowActionInfo"?: (event: StCoreFinishedGrowthPlanCustomEvent<string>) => void;
-        "onShowGoalInfo"?: (event: StCoreFinishedGrowthPlanCustomEvent<string>) => void;
-        "onSort"?: (event: StCoreFinishedGrowthPlanCustomEvent<SortEvent>) => void;
+        "onFilters"?: (event: CustomEvent<{
+            goal: string;
+            state: string;
+            startDate: string;
+            endDate: string;
+        }>) => void;
+        "onShowActionInfo"?: (event: CustomEvent<string>) => void;
+        "onShowGoalInfo"?: (event: CustomEvent<string>) => void;
+        "onSort"?: (event: CustomEvent<SortEvent>) => void;
     }
     interface StCoreFormInput {
         "classForm"?: string;
         "errorMsg"?: any;
         "errors"?: any;
         "labelText"?: string;
-        "onSendAscOrder"?: (event: StCoreFormInputCustomEvent<boolean>) => void;
+        "onSendAscOrder"?: (event: CustomEvent<boolean>) => void;
         "showRequired"?: boolean;
         "showSort"?: boolean;
         "sortAsc"?: boolean;
@@ -708,18 +619,18 @@ declare namespace LocalJSX {
     interface StCoreGoal {
         "goal"?: GoalModel;
         "mentorMode"?: boolean;
-        "onActionAccepted"?: (event: StCoreGoalCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionDate"?: (event: StCoreGoalCustomEvent<DueDateModel>) => void;
-        "onActionInfo"?: (event: StCoreGoalCustomEvent<string>) => void;
-        "onActionRejected"?: (event: StCoreGoalCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionState"?: (event: StCoreGoalCustomEvent<StateModel>) => void;
-        "onAddAction"?: (event: StCoreGoalCustomEvent<GoalModel>) => void;
-        "onGoalAccepted"?: (event: StCoreGoalCustomEvent<string>) => void;
-        "onGoalDate"?: (event: StCoreGoalCustomEvent<DueDateModel>) => void;
-        "onGoalErrors"?: (event: StCoreGoalCustomEvent<ErrorsModel>) => void;
-        "onGoalInfo"?: (event: StCoreGoalCustomEvent<string>) => void;
-        "onGoalRejected"?: (event: StCoreGoalCustomEvent<string>) => void;
-        "onGoalState"?: (event: StCoreGoalCustomEvent<StateModel>) => void;
+        "onActionAccepted"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionDate"?: (event: CustomEvent<DueDateModel>) => void;
+        "onActionInfo"?: (event: CustomEvent<string>) => void;
+        "onActionRejected"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionState"?: (event: CustomEvent<StateModel>) => void;
+        "onAddAction"?: (event: CustomEvent<GoalModel>) => void;
+        "onGoalAccepted"?: (event: CustomEvent<string>) => void;
+        "onGoalDate"?: (event: CustomEvent<DueDateModel>) => void;
+        "onGoalErrors"?: (event: CustomEvent<ErrorsModel>) => void;
+        "onGoalInfo"?: (event: CustomEvent<string>) => void;
+        "onGoalRejected"?: (event: CustomEvent<string>) => void;
+        "onGoalState"?: (event: CustomEvent<StateModel>) => void;
         "statusOptions"?: OptionsModel[];
     }
     interface StCoreGrowthPlan {
@@ -727,60 +638,69 @@ declare namespace LocalJSX {
         "listMode"?: boolean;
         "mentorMode"?: boolean;
         "mentors"?: string[];
-        "onActionSuggestedAccepted"?: (event: StCoreGrowthPlanCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionSuggestedRejected"?: (event: StCoreGrowthPlanCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onAddGoal"?: (event: StCoreGrowthPlanCustomEvent<boolean>) => void;
-        "onErrors"?: (event: StCoreGrowthPlanCustomEvent<ErrorsModel>) => void;
-        "onFilterPlanByName"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
-        "onFinishPlan"?: (event: StCoreGrowthPlanCustomEvent<PlanModel>) => void;
-        "onGoalSuggestedAccepted"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
-        "onGoalSuggestedRejected"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
-        "onSeeHistory"?: (event: StCoreGrowthPlanCustomEvent<boolean>) => void;
-        "onShowActionInfo"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
-        "onShowAddAction"?: (event: StCoreGrowthPlanCustomEvent<GoalModel>) => void;
-        "onShowBoardAddAction"?: (event: StCoreGrowthPlanCustomEvent<boolean>) => void;
-        "onShowBoardEditAction"?: (event: StCoreGrowthPlanCustomEvent<SubCategoriActionModel>) => void;
-        "onShowGoalInfo"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
-        "onSwitchMode"?: (event: StCoreGrowthPlanCustomEvent<boolean>) => void;
-        "onUpdateActionDate"?: (event: StCoreGrowthPlanCustomEvent<DueDateModel>) => void;
-        "onUpdateActionState"?: (event: StCoreGrowthPlanCustomEvent<StateModel>) => void;
-        "onUpdateGoalDate"?: (event: StCoreGrowthPlanCustomEvent<DueDateModel>) => void;
-        "onUpdateGoalState"?: (event: StCoreGrowthPlanCustomEvent<StateModel>) => void;
-        "onUpdateMentors"?: (event: StCoreGrowthPlanCustomEvent<boolean>) => void;
-        "onUpdateProjection"?: (event: StCoreGrowthPlanCustomEvent<string>) => void;
+        "onActionSuggestedAccepted"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionSuggestedRejected"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onAddGoal"?: (event: CustomEvent<boolean>) => void;
+        "onErrors"?: (event: CustomEvent<ErrorsModel>) => void;
+        "onFilterPlanByName"?: (event: CustomEvent<string>) => void;
+        "onFinishPlan"?: (event: CustomEvent<PlanModel>) => void;
+        "onGoalSuggestedAccepted"?: (event: CustomEvent<string>) => void;
+        "onGoalSuggestedRejected"?: (event: CustomEvent<string>) => void;
+        "onSeeHistory"?: (event: CustomEvent<boolean>) => void;
+        "onShowActionInfo"?: (event: CustomEvent<string>) => void;
+        "onShowAddAction"?: (event: CustomEvent<GoalModel>) => void;
+        "onShowBoardAddAction"?: (event: CustomEvent<boolean>) => void;
+        "onShowBoardEditAction"?: (event: CustomEvent<SubCategoriActionModel>) => void;
+        "onShowGoalInfo"?: (event: CustomEvent<string>) => void;
+        "onSwitchMode"?: (event: CustomEvent<boolean>) => void;
+        "onUpdateActionDate"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateActionState"?: (event: CustomEvent<StateModel>) => void;
+        "onUpdateGoalDate"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateGoalState"?: (event: CustomEvent<StateModel>) => void;
+        "onUpdateMentors"?: (event: CustomEvent<boolean>) => void;
+        "onUpdateProjection"?: (event: CustomEvent<string>) => void;
         "plan"?: PlanModel;
     }
     interface StCoreModal {
         "position"?: string;
     }
     interface StCorePaginator {
-        "onChangePage"?: (event: StCorePaginatorCustomEvent<any>) => void;
-        "onChangePageSize"?: (event: StCorePaginatorCustomEvent<any>) => void;
+        "onChangePage"?: (event: CustomEvent<any>) => void;
+        "onChangePageSize"?: (event: CustomEvent<any>) => void;
         "page"?: number;
         "pageSize"?: number;
         "totalItems"?: number;
     }
     interface StCorePlanList {
-        "goalsToRender"?: { state: number; goals: GoalModel[] }[];
+        "goalsToRender"?: {
+            state: number;
+            goals: GoalModel[];
+        }[];
         "mentorMode"?: boolean;
-        "onActionSuggestedAcceptedList"?: (event: StCorePlanListCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onActionSuggestedRejectedList"?: (event: StCorePlanListCustomEvent<ActionGoalSuggestedModel>) => void;
-        "onCardMoved"?: (event: StCorePlanListCustomEvent<StateModel>) => void;
-        "onErrorsList"?: (event: StCorePlanListCustomEvent<ErrorsModel>) => void;
-        "onGoalSuggestedAcceptedList"?: (event: StCorePlanListCustomEvent<string>) => void;
-        "onGoalSuggestedRejectedList"?: (event: StCorePlanListCustomEvent<string>) => void;
-        "onShowActionInfoList"?: (event: StCorePlanListCustomEvent<string>) => void;
-        "onShowAddActionList"?: (event: StCorePlanListCustomEvent<GoalModel>) => void;
-        "onShowGoalInfoList"?: (event: StCorePlanListCustomEvent<string>) => void;
-        "onUpdateActionDateList"?: (event: StCorePlanListCustomEvent<DueDateModel>) => void;
-        "onUpdateActionStateList"?: (event: StCorePlanListCustomEvent<StateModel>) => void;
-        "onUpdateGoalDateList"?: (event: StCorePlanListCustomEvent<DueDateModel>) => void;
-        "onUpdateGoalStateList"?: (event: StCorePlanListCustomEvent<StateModel>) => void;
+        "onActionSuggestedAcceptedList"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onActionSuggestedRejectedList"?: (event: CustomEvent<ActionGoalSuggestedModel>) => void;
+        "onCardMoved"?: (event: CustomEvent<StateModel>) => void;
+        "onErrorsList"?: (event: CustomEvent<ErrorsModel>) => void;
+        "onGoalSuggestedAcceptedList"?: (event: CustomEvent<string>) => void;
+        "onGoalSuggestedRejectedList"?: (event: CustomEvent<string>) => void;
+        "onShowActionInfoList"?: (event: CustomEvent<string>) => void;
+        "onShowAddActionList"?: (event: CustomEvent<GoalModel>) => void;
+        "onShowGoalInfoList"?: (event: CustomEvent<string>) => void;
+        "onUpdateActionDateList"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateActionStateList"?: (event: CustomEvent<StateModel>) => void;
+        "onUpdateGoalDateList"?: (event: CustomEvent<DueDateModel>) => void;
+        "onUpdateGoalStateList"?: (event: CustomEvent<StateModel>) => void;
     }
     interface StCoreProfileTable {
-        "data"?: { discipline: string; forms: { id: string; name: string }[] }[];
+        "data"?: {
+            discipline: string;
+            forms: {
+                id: string;
+                name: string;
+            }[];
+        }[];
         "isAdmin"?: boolean;
-        "onDeleteForm"?: (event: StCoreProfileTableCustomEvent<string>) => void;
+        "onDeleteForm"?: (event: CustomEvent<string>) => void;
     }
     interface StCoreRadar {
         "categories"?: string[];
@@ -794,16 +714,16 @@ declare namespace LocalJSX {
     interface StCoreSelectSkill {
         "data"?: SkillItem[];
         "name"?: string;
-        "onSendSearch"?: (event: StCoreSelectSkillCustomEvent<string>) => void;
-        "onSendSkillId"?: (event: StCoreSelectSkillCustomEvent<string>) => void;
+        "onSendSearch"?: (event: CustomEvent<string>) => void;
+        "onSendSkillId"?: (event: CustomEvent<string>) => void;
     }
     interface StCoreSelectTemplate {
         "data"?: AssesFormat[];
         "disableEdit"?: boolean;
-        "onChangePage"?: (event: StCoreSelectTemplateCustomEvent<any>) => void;
-        "onChangePageSize"?: (event: StCoreSelectTemplateCustomEvent<any>) => void;
-        "onSendFilters"?: (event: StCoreSelectTemplateCustomEvent<TemplateFilter>) => void;
-        "onSendTemplateId"?: (event: StCoreSelectTemplateCustomEvent<string>) => void;
+        "onChangePage"?: (event: CustomEvent<any>) => void;
+        "onChangePageSize"?: (event: CustomEvent<any>) => void;
+        "onSendFilters"?: (event: CustomEvent<TemplateFilter>) => void;
+        "onSendTemplateId"?: (event: CustomEvent<string>) => void;
         "page"?: number;
         "pageSize"?: number;
         "totalItems"?: number;
@@ -812,15 +732,15 @@ declare namespace LocalJSX {
         "classSelect"?: string;
         "isDisabled"?: boolean;
         "name"?: string;
-        "onSelectElement"?: (event: StCoreSelectorCustomEvent<any>) => void;
-        "options"?: OptionsModel1[];
+        "onSelectElement"?: (event: CustomEvent<any>) => void;
+        "options"?: OptionsModel[];
         "placeholder"?: string;
         "selected"?: any;
         "value"?: any;
     }
     interface StCoreSelfAssessmentTooltip {
         "isAdmin"?: boolean;
-        "onSendSelfAssessment"?: (event: StCoreSelfAssessmentTooltipCustomEvent<SelfAssessmentModel>) => void;
+        "onSendSelfAssessment"?: (event: CustomEvent<SelfAssessmentModel>) => void;
         "showText"?: boolean;
         "skill"?: UserSkillModel;
     }
@@ -833,9 +753,9 @@ declare namespace LocalJSX {
     }
     interface StCoreSkillDetail {
         "info"?: {
-    userSkill: UserSkillModel;
-    index: number;
-  };
+            userSkill: UserSkillModel;
+            index: number;
+        };
         "levelsEnum"?: any;
     }
     interface StCoreSkillEvaluation {
@@ -846,14 +766,14 @@ declare namespace LocalJSX {
         "formName"?: string;
         "initialDiscipline"?: string;
         "isASingleSkill"?: boolean;
-        "onAddNewSkill"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onDownloadReport"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onInputEmployee"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onSavedPartial"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onSelectedDate"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onSelectedDiscipline"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onSelectedEmployee"?: (event: StCoreSkillEvaluationCustomEvent<string>) => void;
-        "onSubmitEvent"?: (event: StCoreSkillEvaluationCustomEvent<any>) => void;
+        "onAddNewSkill"?: (event: CustomEvent<string>) => void;
+        "onDownloadReport"?: (event: CustomEvent<string>) => void;
+        "onInputEmployee"?: (event: CustomEvent<string>) => void;
+        "onSavedPartial"?: (event: CustomEvent<string>) => void;
+        "onSelectedDate"?: (event: CustomEvent<string>) => void;
+        "onSelectedDiscipline"?: (event: CustomEvent<string>) => void;
+        "onSelectedEmployee"?: (event: CustomEvent<string>) => void;
+        "onSubmitEvent"?: (event: CustomEvent<any>) => void;
         "readOnly"?: boolean;
         "showDownloadButton"?: boolean;
         "showInfoPanel"?: boolean;
@@ -864,41 +784,44 @@ declare namespace LocalJSX {
     interface StCoreSkillTable {
         "hasSoftSkills"?: boolean;
         "isEditable"?: boolean;
-        "onFilters"?: (event: StCoreSkillTableCustomEvent<{
-    displayName: string;
-    date: string;
-    level: string;
-    type: string;
-    observation: string;
-    discipline: string;
-  }>) => void;
-        "onSeeHistorical"?: (event: StCoreSkillTableCustomEvent<{
-    skillId: string;
-  }>) => void;
-        "onSetSelfAssessment"?: (event: StCoreSkillTableCustomEvent<SelfAssessmentModel>) => void;
-        "onSort"?: (event: StCoreSkillTableCustomEvent<SortEvent>) => void;
+        "onFilters"?: (event: CustomEvent<{
+            displayName: string;
+            date: string;
+            level: string;
+            type: string;
+            observation: string;
+            discipline: string;
+        }>) => void;
+        "onSeeHistorical"?: (event: CustomEvent<{
+            skillId: string;
+        }>) => void;
+        "onSetSelfAssessment"?: (event: CustomEvent<SelfAssessmentModel>) => void;
+        "onSort"?: (event: CustomEvent<SortEvent>) => void;
         "userSkills"?: UserSkillModel[];
     }
     interface StCoreSort {
         "column"?: string;
-        "onSort"?: (event: StCoreSortCustomEvent<SortEvent1>) => void;
+        "onSort"?: (event: CustomEvent<SortEvent>) => void;
         "sortable"?: string;
     }
     interface StCoreStarsSkill {
         "definedLevel"?: boolean;
         "level"?: number | undefined;
         "name"?: string;
-        "onSelectedStar"?: (event: StCoreStarsSkillCustomEvent<number>) => void;
+        "onSelectedStar"?: (event: CustomEvent<number>) => void;
         "position"?: string;
         "showZeroLevel"?: boolean;
-        "size"?: 'sm' | 'md' | 'xs';
+        "size"?: "sm" | "md" | "xs";
     }
     interface StCoreSwitchInput {
         "dataAutomation"?: string;
-        "onSwitchHandler"?: (event: StCoreSwitchInputCustomEvent<boolean>) => void;
+        "onSwitchHandler"?: (event: CustomEvent<boolean>) => void;
         "readOnly"?: boolean;
-        "size"?: 'normal' | 'small' | 'x-small';
-        "texts"?: { enabled: string; disabled: string };
+        "size"?: "normal" | "small" | "x-small";
+        "texts"?: {
+            enabled: string;
+            disabled: string;
+        };
         "value"?: boolean;
     }
     interface StCoreSwitchSkill {
@@ -917,7 +840,7 @@ declare namespace LocalJSX {
     interface StCoreTag {
         "close"?: boolean;
         "element"?: any;
-        "onRemoveElement"?: (event: StCoreTagCustomEvent<any>) => void;
+        "onRemoveElement"?: (event: CustomEvent<any>) => void;
         "tag"?: string;
     }
     interface StCoreTagsInputs {
@@ -925,10 +848,10 @@ declare namespace LocalJSX {
         "data"?: any[];
         "isHidden"?: boolean;
         "isInTable"?: boolean;
-        "onAddElement"?: (event: StCoreTagsInputsCustomEvent<any>) => void;
-        "onAutoInput"?: (event: StCoreTagsInputsCustomEvent<string>) => void;
-        "onSetElements"?: (event: StCoreTagsInputsCustomEvent<string[]>) => void;
-        "onUpKey"?: (event: StCoreTagsInputsCustomEvent<boolean>) => void;
+        "onAddElement"?: (event: CustomEvent<any>) => void;
+        "onAutoInput"?: (event: CustomEvent<string>) => void;
+        "onSetElements"?: (event: CustomEvent<string[]>) => void;
+        "onUpKey"?: (event: CustomEvent<boolean>) => void;
         "placeholder"?: string;
     }
     interface StCoreToast {
@@ -942,7 +865,7 @@ declare namespace LocalJSX {
         "color"?: string;
         "isDisabled"?: boolean;
         "positionTooltip"?: string;
-        "size"?: 'md' | '';
+        "size"?: "md" | "";
     }
     interface StCoreTooltipSkill {
         "hasDescriptionClass"?: boolean;
